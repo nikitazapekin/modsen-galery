@@ -1,21 +1,20 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
-   "compilerOptions": {
+ 
+ "compilerOptions": {
+    "jsx": "react-jsx",
     "types": ["styled-components"],
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./*"],
       "@components/*": ["./components/*"],
-      "@pages/*": ["pages/*"],
-      "@hooks/*": ["hooks/*"],
-      "@utils/*": ["utils/*"],
-      "@assets/*": ["assets/*"]
+      "@pages/*": ["./pages/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@utils/*": ["./utils/*"],
+      "@assets/*": ["./assets/*"]
     }
   },
+  "include": ["src"],
+  "exclude": ["node_modules"]
    
 }
 
