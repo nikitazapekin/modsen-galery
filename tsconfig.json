@@ -1,0 +1,22 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+   "compilerOptions": {
+    "types": ["styled-components"],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./components/*"],
+      "@pages/*": ["pages/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@assets/*": ["assets/*"]
+    }
+  },
+   
+}
+
+
