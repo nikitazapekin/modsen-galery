@@ -1,10 +1,7 @@
-import { Button } from "@/components/Button/Button";
+import { Button } from "@/components/Button/Button"
 
 const Category = () => {
-    return ( <div>
-        Category
-        <Button>csa</Button>
-    </div> );
+  return <div>Category</div>
 }
- 
-export default Category;
+
+export default Category
