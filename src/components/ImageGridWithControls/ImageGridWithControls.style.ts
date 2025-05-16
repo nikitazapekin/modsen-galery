@@ -7,10 +7,9 @@ export const ImageGridWrapper = styled.div`
 `
 
 export const Container = styled.div`
-  max-width: ${({ theme }) => theme.container + 40}px;
+  max-width: 908px;
   width: 100%;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
 `

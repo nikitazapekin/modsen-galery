@@ -10,6 +10,7 @@ export const theme = {
     black: "#000",
     darkGray: "#393939",
     tinyGray: "#c4c4c4",
+    grayCard: "#f9f9f9",
   },
   gradients: {
     grayGradient: "linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%)",

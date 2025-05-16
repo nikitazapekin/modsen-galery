@@ -18,7 +18,6 @@ const useFetchImages = (
 
       setLoading(true)
       try {
-        let response
         let fetchedImages: UnsplashPhoto[]
 
         if (query) {

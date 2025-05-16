@@ -7,7 +7,6 @@ export const LetsFindTitleWhite = styled.span`
 `
 export const LetsFindTitleSmall = styled.h1`
   font-family: ${({ theme }) => theme.fonts.roboto};
-
   font-weight: 700;
   font-size: 64px;
   text-transform: capitalize;
