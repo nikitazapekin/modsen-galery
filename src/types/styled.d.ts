@@ -3,6 +3,7 @@ import "styled-components"
 declare module "styled-components" {
   export interface DefaultTheme {
     container: number
+    largeContainer: number
     sizes: Record<string, string>
     colors: Record<string, string>
     gradients: Record<string, string>

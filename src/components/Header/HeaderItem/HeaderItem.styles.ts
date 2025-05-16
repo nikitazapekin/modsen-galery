@@ -7,28 +7,12 @@ export const HeaderItemWrapper = styled.div`
 `
 
 export const HeaderItemText = styled.p<{ $isActive?: boolean }>`
-  max-width: ${({ theme }) => theme.container}px;
   font-family: ${({ theme }) => theme.fonts.roboto};
   font-weight: 400;
   font-size: 24px;
   color: ${({ theme, $isActive }) => ($isActive ? theme.colors.orange : theme.colors.white)};
 `
 
-export const HeaderItemIcon = styled.img``
-
-/* export const HeaderItemWrapper = styled.div`
-  cursor: pointer;
-  display: flex;
-  column-gap: 8px;
+export const HeaderItemIcon = styled.img<{ $isActive?: boolean }>`
+  box-shadow: ${({ $isActive }) => ($isActive ? "0 4px 4px 0 rgba(0, 0, 0, 0.25)" : "none")};
 `
-
-export const HeaderItemText = styled.p`
-  max-width: ${({ theme }) => theme.container}px;
-  font-family: ${({ theme }) => theme.fonts.roboto};
-  font-weight: 400;
-  font-size: 24px;
-  color: ${({ theme }) => theme.colors.white};
-`
-
-export const HeaderItemIcon = styled.img``
- */
