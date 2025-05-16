@@ -1,24 +1,23 @@
+import { useLocation } from "react-router-dom"
 import {
   Container,
   LetsFindContent,
   LetsFindSectionWrapper,
-  LetsFindTitle,
-  LetsFindTitleOrange,
-  LetsFindTitleWhite,
   PreviewImage,
 } from "./LetsFindSection.style"
 import Background from "@assets/preview/PreviewImage.png"
+import ImagesContent from "./ImagesContent/ImagesContent"
+import CatalogContent from "./CatalogContent/CatalogContent"
 const LetsFindSection = () => {
+  const location = useLocation()
+  const lastPathSegment = location.pathname.split("/").pop() || ""
+
   return (
     <LetsFindSectionWrapper>
       <PreviewImage src={Background} />
       <Container>
-        <LetsFindContent>
-          <LetsFindTitle>
-            <LetsFindTitleWhite>let's find some {` `}</LetsFindTitleWhite>
-            <LetsFindTitleOrange>Images {` `}</LetsFindTitleOrange>
-            <LetsFindTitleWhite>here!</LetsFindTitleWhite>
-          </LetsFindTitle>
+        <LetsFindContent hasSearchInput={lastPathSegment == "images"}>
+          {lastPathSegment == "images" ? <ImagesContent /> : <CatalogContent />}
         </LetsFindContent>
       </Container>
     </LetsFindSectionWrapper>

@@ -13,7 +13,7 @@ export const CategoryCardImage = styled.img`
 export const CategoryCardText = styled.div`
   position: absolute;
   left: 10px;
-  bottom: 10px;
+  bottom: 20px;
   font-weight: 600;
   font-size: 20px;
   color: ${({ theme }) => theme.colors.white};

@@ -7,6 +7,7 @@ export const theme = {
     orange: "#E0A449",
     gray: "rgba(255, 255, 255, 0.6)",
     orangeExplicit: "#f17900",
+    black: "#000",
   },
   gradients: {
     grayGradient: "linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%)",
@@ -14,6 +15,7 @@ export const theme = {
 
   fonts: {
     roboto: "'Roboto', sans-serif",
+    montserrat: "'Montserrat', sans-serif",
     lexend: "Lexend Deca",
   },
   fontSizes: {

@@ -1,4 +1,4 @@
-import Art from "@assets/categories/Sky.png"
+import Art from "@assets/categories/Art.png"
 import Cars from "@assets/categories/Cars.png"
 import Architecture from "@assets/categories/Architecture.png"
 import Food from "@assets/categories/Food.png"
