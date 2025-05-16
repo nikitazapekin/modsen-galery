@@ -4,6 +4,7 @@ export const CategoryCardWrapper = styled.div`
   width: 285px;
   height: 244px;
   position: relative;
+  cursor: pointer;
 `
 export const CategoryCardImage = styled.img`
   width: 100%;
