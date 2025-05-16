@@ -3,11 +3,11 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   height: auto;
   background: ${({ theme }) => theme.gradients.grayGradient};
-  padding: 80px 0 30px 0;
+  padding: 80px 18px 30px 18px;
 `
 
 export const Container = styled.div`
-  max-width: ${({ theme }) => theme.largeContainer}px;
+  max-width: ${({ theme }) => theme.largeContainer + 36}px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -20,7 +20,6 @@ export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   column-gap: 85.6px;
-  // align-items: center;
 `
 
 export const LogoImage = styled.img`

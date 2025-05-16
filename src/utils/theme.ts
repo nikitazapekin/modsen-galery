@@ -6,6 +6,7 @@ export const theme = {
     white: "#FFFFFF",
     orange: "#E0A449",
     gray: "rgba(255, 255, 255, 0.6)",
+    orangeExplicit: "#f17900",
   },
   gradients: {
     grayGradient: "linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%)",
@@ -28,9 +29,6 @@ export const theme = {
   },
 
   borders: {
-    radiusSmall: "4px",
-    radiusMedium: "8px",
-    radiusLarge: "12px",
-    radiusCircle: "50%",
+    textBorder: "4px #000",
   },
 }

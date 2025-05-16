@@ -23,10 +23,7 @@ declare module "styled-components" {
       bold: number
     }
     borders: {
-      radiusSmall: string
-      radiusMedium: string
-      radiusLarge: string
-      radiusCircle: string
+      textBorder: string
     }
   }
 }

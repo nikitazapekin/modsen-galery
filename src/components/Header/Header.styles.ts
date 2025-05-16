@@ -3,11 +3,11 @@ export const HeaderWrapper = styled.header`
   width: 100%;
   height: auto;
   background: ${({ theme }) => theme.gradients.grayGradient};
-  padding: 21px 0 22px 0;
+  padding: 21px 12px 22px 17px;
 `
 
 export const Container = styled.div`
-  max-width: ${({ theme }) => theme.container}px;
+  max-width: ${({ theme }) => theme.container + 29}px;
   width: 100%;
   margin: 0 auto;
 
