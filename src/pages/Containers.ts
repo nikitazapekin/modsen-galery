@@ -24,11 +24,6 @@ export const PageWrapper = styled.div`
   max-width: 100%;
 `
 export const WrapperContainer = styled.main`
-  /*   max-width: ${({ theme }) => theme.container}px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;  */
-
   flex: 1 1 auto;
   display: flex;
   width: 100%;

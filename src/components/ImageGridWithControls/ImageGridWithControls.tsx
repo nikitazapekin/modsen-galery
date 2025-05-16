@@ -5,26 +5,10 @@ import { useEffect, useState } from "react"
 import PhotosService from "@/services/PhotosService"
 import { UnsplashPhoto } from "@/services/types"
 import ImagesList from "./ImagesList/ImagesList"
+import useFetchImages from "@/hooks/useFetchImages"
 const ImageGridWithControls = () => {
   const { page, limit, type } = useParams()
-  const [images, setImages] = useState<UnsplashPhoto[]>([])
-  const handleGetImages = async () => {
-    try {
-      let response
-      if (type == "random") {
-        response = await PhotosService.getRandom(Number(page), Number(limit))
-      } else {
-        response = await PhotosService.getTopicsPhoto(Number(page), Number(limit), type)
-      }
-      console.log("res", response.data)
-      setImages(response.data)
-    } catch (e) {
-      console.log(e)
-    }
-  }
-  useEffect(() => {
-    handleGetImages()
-  }, [page])
+  const { images, loading, error } = useFetchImages(page, limit, type)
 
   return (
     <ImageGridWrapper>

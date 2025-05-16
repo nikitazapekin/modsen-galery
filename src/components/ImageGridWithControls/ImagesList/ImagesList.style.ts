@@ -10,10 +10,3 @@ export const ImageListWrapper = styled.section`
   grid-row-gap: 23.85px;
   grid-column-gap: 26px;
 `
-
-/*
-import styled, { css } from "styled-components"
-export const LetsFindTitleOrange = styled.span`
-  color: ${({ theme }) => theme.colors.orangeExplicit};
-`
-*/

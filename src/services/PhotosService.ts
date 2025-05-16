@@ -16,4 +16,13 @@ export default class PhotosService {
   ): Promise<AxiosResponse<UnsplashPhoto[]>> {
     return $api.get<UnsplashPhoto[]>(`/topics/${topic}/photos?page=${page}&per_page=${limit}`)
   }
+
+  static async searchPhotos(
+    page: number,
+    limit: number,
+    query: string,
+  ): Promise<AxiosResponse<UnsplashPhoto[]>> {
+    return $api.get<UnsplashPhoto[]>(`/search/photos?page=${page}&per_page=${limit}&query=${query}`)
+  }
 }
+//https://api.unsplash.com/search/photos?query=meme&count=10&page=1
