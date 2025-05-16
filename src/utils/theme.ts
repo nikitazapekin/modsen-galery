@@ -3,6 +3,7 @@ export const theme = {
   sizes: {},
   colors: {
     white: "#FFFFFF",
+    orange: "#E0A449",
   },
   gradients: {
     grayGradient: "linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%)",

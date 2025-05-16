@@ -19,20 +19,20 @@ export const headerBtns: HeaderBtnType[] = [
     text: "Category",
     icon: Category,
     activeIcon: CategoryActive,
-    link: "#category",
+    link: "/",
   },
   {
     id: 2,
     text: "Images",
     icon: Images,
     activeIcon: ImagesActive,
-    link: "#images",
+    link: "/images",
   },
   {
     id: 3,
     text: "Favourites",
     icon: Favourites,
     activeIcon: FavouritesActive,
-    link: "#favourites",
+    link: "/favourites",
   },
 ]
