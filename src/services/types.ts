@@ -24,7 +24,7 @@ export interface UnsplashTopic {
   cover_photo: UnsplashPhoto
 }
 
-interface UnsplashPhoto {
+export interface UnsplashPhoto {
   id: string
   slug: string
   alternative_slugs: {
@@ -46,7 +46,7 @@ interface UnsplashPhoto {
   blur_hash: string
   description: string | null
   alt_description: string
-  breadcrumbs: any[] // Можно уточнить тип
+
   urls: {
     raw: string
     full: string
@@ -63,8 +63,7 @@ interface UnsplashPhoto {
   }
   likes: number
   liked_by_user: boolean
-  current_user_collections: any[] // Можно уточнить тип
-  sponsorship: any | null // Можно уточнить тип
+
   topic_submissions: Record<
     string,
     {

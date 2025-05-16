@@ -64,7 +64,7 @@ export const SortPanelDropDown = styled.div<{ $isOpenDropDown: boolean }>`
   visibility: ${({ $isOpenDropDown }) => ($isOpenDropDown ? "visible" : "hidden")};
 `
 
-export const SortPanelDropDownItem = styled.div`
+/* export const SortPanelDropDownItem = styled.div`
   width: 100%;
   font-weight: 500;
   font-size: 16px;
@@ -84,3 +84,4 @@ export const SortPanelDropDownItem = styled.div`
     border-bottom: 1px solid ${({ theme }) => theme.colors.tinyGray};
   }
 `
+ */

@@ -4,12 +4,13 @@ import {
   SortBarWrapper,
   SortPanel,
   SortPanelDropDown,
-  SortPanelDropDownItem,
   SortPanelIcon,
   SortPanelText,
   SortPanelWrapper,
 } from "./SortBar.styles"
 import Arrow from "@assets/icons/Dropdown.svg"
+import { sortCategories } from "./consts"
+import SortCategory from "./SortCategory/SortCategory"
 
 const SortBar = () => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false)
@@ -34,15 +35,13 @@ const SortBar = () => {
         </SortPanel>
 
         <SortPanelDropDown $isOpenDropDown={isOpenDropDown}>
-          <SortPanelDropDownItem onClick={() => handleSelectOption("Relevant")}>
-            Relevant
-          </SortPanelDropDownItem>
-          <SortPanelDropDownItem onClick={() => handleSelectOption("Newest")}>
-            Newest
-          </SortPanelDropDownItem>
-          <SortPanelDropDownItem onClick={() => handleSelectOption("Popular")}>
-            Popular
-          </SortPanelDropDownItem>
+          {sortCategories.map((item) => (
+            <SortCategory
+              option={item}
+              handler={() => handleSelectOption(item.type)}
+              key={item.id}
+            />
+          ))}
         </SortPanelDropDown>
       </SortPanelWrapper>
     </SortBarWrapper>

@@ -16,10 +16,8 @@ export const LetsFindTitleSmall = styled.h1`
   text-stroke: ${({ theme }) => theme.borders.textBorder};
   paint-order: stroke fill;
   max-width: 764px;
-
   color: ${({ theme }) => theme.colors.white};
 `
-
 export const SearchWrapper = styled.div`
   position: relative;
   height: auto;
@@ -40,7 +38,6 @@ export const SearchInput = styled.input`
   font-family: ${({ theme }) => theme.fonts.montserrat};
   color: ${({ theme }) => theme.colors.black};
 `
-
 export const SearchIcon = styled.img`
   position: absolute;
   padding: 18px 0 18px 25px;

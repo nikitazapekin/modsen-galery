@@ -10,14 +10,14 @@ import ImagesContent from "./ImagesContent/ImagesContent"
 import CatalogContent from "./CatalogContent/CatalogContent"
 const LetsFindSection = () => {
   const location = useLocation()
-  const lastPathSegment = location.pathname.split("/").pop() || ""
+  const isImagesPage = location.pathname.startsWith("/images")
 
   return (
     <LetsFindSectionWrapper>
       <PreviewImage src={Background} />
       <Container>
-        <LetsFindContent $hasSearchInput={lastPathSegment == "images"}>
-          {lastPathSegment == "images" ? <ImagesContent /> : <CatalogContent />}
+        <LetsFindContent $hasSearchInput={isImagesPage}>
+          {isImagesPage ? <ImagesContent /> : <CatalogContent />}
         </LetsFindContent>
       </Container>
     </LetsFindSectionWrapper>
