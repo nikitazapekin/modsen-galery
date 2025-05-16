@@ -1,6 +1,6 @@
 import $api from "../http"
 import { AxiosResponse } from "axios"
-import { UnsplashTopic, UnsplashPhoto } from "./types"
+import { UnsplashTopic, UnsplashPhoto, UnsplashSearchResponse } from "./types"
 
 export default class PhotosService {
   static async getRandom(page: number, limit: number): Promise<AxiosResponse<UnsplashPhoto[]>> {
@@ -21,8 +21,9 @@ export default class PhotosService {
     page: number,
     limit: number,
     query: string,
-  ): Promise<AxiosResponse<UnsplashPhoto[]>> {
-    return $api.get<UnsplashPhoto[]>(`/search/photos?page=${page}&per_page=${limit}&query=${query}`)
+  ): Promise<AxiosResponse<UnsplashSearchResponse>> {
+    return $api.get<UnsplashSearchResponse>(
+      `/search/photos?page=${page}&per_page=${limit}&query=${query}`,
+    )
   }
 }
-//https://api.unsplash.com/search/photos?query=meme&count=10&page=1

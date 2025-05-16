@@ -18,14 +18,11 @@ const Categories = () => {
   useEffect(() => {
     getCategories()
   }, [])
+
   return (
     <CategoriesWrapper>
       <Container>
-        <Cards>
-          {cards.map((item) => (
-            <CategoryCard card={item} key={item.id} />
-          ))}
-        </Cards>
+        <Cards>{cards && cards.map((item) => <CategoryCard card={item} key={item.id} />)}</Cards>
       </Container>
     </CategoriesWrapper>
   )

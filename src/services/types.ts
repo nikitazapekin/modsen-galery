@@ -23,6 +23,11 @@ export interface UnsplashTopic {
 
   cover_photo: UnsplashPhoto
 }
+export interface UnsplashSearchResponse {
+  total: number
+  total_pages: number
+  results: UnsplashPhoto[]
+}
 
 export interface UnsplashPhoto {
   id: string

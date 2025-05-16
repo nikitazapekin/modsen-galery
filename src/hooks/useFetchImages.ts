@@ -1,12 +1,12 @@
-// hooks/useFetchImages.ts
 import { useEffect, useState } from "react"
 import PhotosService from "@/services/PhotosService"
-import { UnsplashPhoto } from "@/services/types"
+import { UnsplashPhoto, UnsplashSearchResponse } from "@/services/types"
 
 const useFetchImages = (
   page: string | undefined,
   limit: string | undefined,
   type: string | undefined,
+  query?: string,
 ) => {
   const [images, setImages] = useState<UnsplashPhoto[]>([])
   const [loading, setLoading] = useState(false)
@@ -14,28 +14,47 @@ const useFetchImages = (
 
   useEffect(() => {
     const fetchImages = async () => {
-      if (!page || !limit || !type) return
+      if (!page || !limit) return
 
       setLoading(true)
       try {
         let response
-        if (type === "random") {
-          response = await PhotosService.getRandom(Number(page), Number(limit))
+        let fetchedImages: UnsplashPhoto[]
+
+        if (query) {
+          const searchResponse = await PhotosService.searchPhotos(
+            Number(page),
+            Number(limit),
+            query,
+          )
+          fetchedImages = searchResponse.data.results
+        } else if (type === "random") {
+          const randomResponse = await PhotosService.getRandom(Number(page), Number(limit))
+          fetchedImages = randomResponse.data
+        } else if (type) {
+          const topicsResponse = await PhotosService.getTopicsPhoto(
+            Number(page),
+            Number(limit),
+            type,
+          )
+          fetchedImages = topicsResponse.data
         } else {
-          response = await PhotosService.getTopicsPhoto(Number(page), Number(limit), type)
+          return
         }
-        setImages(response.data)
+
+        setImages(fetchedImages)
         setError(null)
       } catch (e) {
         setError(e as Error)
-        console.error(e)
+        console.error("Failed to fetch images:", e)
+        setImages([])
       } finally {
         setLoading(false)
       }
     }
 
     fetchImages()
-  }, [page, limit, type])
+  }, [page, limit, type, query])
 
   return { images, loading, error }
 }
