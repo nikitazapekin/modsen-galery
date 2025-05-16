@@ -1,7 +1,5 @@
-import styled, { css } from 'styled-components';
-//import { ButtonVariant, ButtonSize } from './Button.types';
-//import { ButtonVariant, ButtonSize } from './Button.types';
-import type { ButtonVariant, ButtonSize } from './Button.types';
+import styled, { css } from "styled-components"
+import type { ButtonVariant, ButtonSize } from "./Button.types"
 const buttonSizes: Record<ButtonSize, ReturnType<typeof css>> = {
   small: css`
     padding: 8px 12px;
@@ -15,7 +13,7 @@ const buttonSizes: Record<ButtonSize, ReturnType<typeof css>> = {
     padding: 16px 24px;
     font-size: 16px;
   `,
-};
+}
 
 const buttonVariants: Record<ButtonVariant, ReturnType<typeof css>> = {
   primary: css`
@@ -54,13 +52,13 @@ const buttonVariants: Record<ButtonVariant, ReturnType<typeof css>> = {
       background-color: #f8fafc;
     }
   `,
-};
+}
 
 export const StyledButton = styled.button<{
-  $variant: ButtonVariant;
-  $size: ButtonSize;
-  $fullWidth: boolean;
-  $isLoading: boolean;
+  $variant: ButtonVariant
+  $size: ButtonSize
+  $fullWidth: boolean
+  $isLoading: boolean
 }>`
   cursor: pointer;
   border-radius: 6px;
@@ -73,11 +71,11 @@ export const StyledButton = styled.button<{
 
   ${({ $variant }) => buttonVariants[$variant]}
   ${({ $size }) => buttonSizes[$size]}
-  ${({ $fullWidth }) => $fullWidth && 'width: 100%;'}
-  ${({ $isLoading }) => $isLoading && 'opacity: 0.7; cursor: wait;'}
+  ${({ $fullWidth }) => $fullWidth && "width: 100%;"}
+  ${({ $isLoading }) => $isLoading && "opacity: 0.7; cursor: wait;"}
 
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
-`;
+`

@@ -3,22 +3,16 @@ import { theme } from "@/utils/theme"
 import { ThemeProvider } from "styled-components"
 import { WrapperContainer, PageWrapper, GlobalStyle } from "../Containers"
 import Header from "@/components/Header/Header"
-import Footer from "@/components/Footer/Footer"
-import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
-import Categories from "@/components/Categories/Categories"
 
-const Category = () => {
+const Images = () => {
   return (
     <PageWrapper>
       <Header />
       <GlobalStyle />
-      <WrapperContainer>
-        <LetsFindSection />
-        <Categories />
-      </WrapperContainer>
-      <Footer />
+      <WrapperContainer>images</WrapperContainer>
+      <Header />
     </PageWrapper>
   )
 }
 
-export default Category
+export default Images

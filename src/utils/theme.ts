@@ -1,21 +1,20 @@
-// theme.js
 export const theme = {
-  sizes: {
-    small: "8px",
-    medium: "16px",
-    large: "24px",
-    xlarge: "32px",
-  },
+  container: 1150,
+  largeContainer: 1250,
+  sizes: {},
   colors: {
-    primary: "#6200ee",
-    secondary: "#03dac6",
-    error: "#b00020",
-    background: "#ffffff",
-    text: "#000000",
+    white: "#FFFFFF",
+    orange: "#E0A449",
+    gray: "rgba(255, 255, 255, 0.6)",
+    orangeExplicit: "#f17900",
   },
+  gradients: {
+    grayGradient: "linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%)",
+  },
+
   fonts: {
-    main: "'Roboto', sans-serif",
-    secondary: "'Open Sans', sans-serif",
+    roboto: "'Roboto', sans-serif",
+    lexend: "Lexend Deca",
   },
   fontSizes: {
     small: "12px",
@@ -28,15 +27,8 @@ export const theme = {
     regular: 400,
     bold: 700,
   },
-  zIndexes: {
-    modal: 1000,
-    dropdown: 500,
-    tooltip: 200,
-  },
+
   borders: {
-    radiusSmall: "4px",
-    radiusMedium: "8px",
-    radiusLarge: "12px",
-    radiusCircle: "50%",
+    textBorder: "1px #000",
   },
-};
+}

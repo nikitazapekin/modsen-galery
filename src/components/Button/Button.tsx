@@ -1,11 +1,9 @@
-
-import { StyledButton } from './Button.styles';
-import type { ButtonProps } from './Button.types';
-//import { Spinner } from '../Spinner';  
+import { StyledButton } from "./Button.styles"
+import type { ButtonProps } from "./Button.types"
 
 export const Button: React.FC<ButtonProps> = ({
-  variant = 'primary',
-  size = 'medium',
+  variant = "primary",
+  size = "medium",
   isLoading = false,
   fullWidth = false,
   children,
@@ -21,11 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
       disabled={disabled || isLoading}
       {...props}
     >
-        {/*
-
-            {isLoading && <Spinner size="small" />}
-        */}
       {children}
     </StyledButton>
-  );
-};
+  )
+}
