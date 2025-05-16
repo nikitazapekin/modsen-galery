@@ -29,6 +29,6 @@ export const theme = {
   },
 
   borders: {
-    textBorder: "4px #000",
+    textBorder: "1px #000",
   },
 }

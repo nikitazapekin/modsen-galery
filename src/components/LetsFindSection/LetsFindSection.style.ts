@@ -51,12 +51,3 @@ export const LetsFindTitleOrange = styled.span`
 export const LetsFindTitleWhite = styled.span`
   color: ${({ theme }) => theme.colors.white};
 `
-
-/* git commit -m "feat: add site Lets find section"
-export const HeaderItemText = styled.p<{ $isActive?: boolean }>`
-  font-family: ${({ theme }) => theme.fonts.roboto};
-  font-weight: 400;
-  font-size: 24px;
-  color: ${({ theme, $isActive }) => ($isActive ? theme.colors.orange : theme.colors.white)};
-`
- */
