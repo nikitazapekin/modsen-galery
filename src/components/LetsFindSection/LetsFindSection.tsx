@@ -16,7 +16,7 @@ const LetsFindSection = () => {
     <LetsFindSectionWrapper>
       <PreviewImage src={Background} />
       <Container>
-        <LetsFindContent hasSearchInput={lastPathSegment == "images"}>
+        <LetsFindContent $hasSearchInput={lastPathSegment == "images"}>
           {lastPathSegment == "images" ? <ImagesContent /> : <CatalogContent />}
         </LetsFindContent>
       </Container>

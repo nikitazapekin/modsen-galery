@@ -26,7 +26,7 @@ export const headerBtns: HeaderBtnType[] = [
     text: "Images",
     icon: Images,
     activeIcon: ImagesActive,
-    link: "/images",
+    link: "/images/0/12/random",
   },
   {
     id: 3,

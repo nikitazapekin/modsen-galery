@@ -8,7 +8,7 @@ import {
 import { FooterItemProps } from "./FooterItem.types"
 const FooterItem = ({ item }: FooterItemProps) => {
   return (
-    <FooterItemWrapper maxWidth={item.maxWidth}>
+    <FooterItemWrapper $maxWidth={item.maxWidth}>
       <FooterItemTitle>{item.title}</FooterItemTitle>
       <FooterItemList>
         {item.btns.map((btn, index) => (
