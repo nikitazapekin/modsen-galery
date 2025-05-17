@@ -24,6 +24,7 @@ export const ImageItemPreview = styled.div`
   justify-content: space-between;
   padding: 9.6px 9.5px;
   align-items: center;
+  column-gap: 8px;
 `
 export const ImageItemText = styled.h4`
   font-weight: 500;
@@ -40,7 +41,7 @@ export const ImageItemIconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 39px;
+  min-width: 39px;
   height: 39px;
   background-color: ${({ theme }) => theme.colors.grayCard};
 `

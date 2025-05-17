@@ -28,7 +28,7 @@ const ImagesListItem = ({ card }: ImagesListItemProps) => {
       <ImageItemPhoto src={card.urls.full} />
 
       <ImageItemPreview>
-        <ImageItemText>{truncateText(card.description, 20)}</ImageItemText>
+        <ImageItemText>{truncateText(card.description, 40)}</ImageItemText>
         <ImageItemIconWrapper onClick={handleStore}>
           <ImageItemIcon src={isCardSaved(card.id) ? Notion : NotionDisabled} alt={"Icon"} />
         </ImageItemIconWrapper>

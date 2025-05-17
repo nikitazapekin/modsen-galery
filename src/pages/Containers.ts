@@ -1,12 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
- // @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    //font-family: ${({ theme }) => theme.fonts.lexend};
   }
 
   ul, ol {
@@ -30,4 +28,5 @@ export const WrapperContainer = styled.main`
   display: flex;
   width: 100%;
   flex-direction: column;
+  min-height: 100vh;
 `
