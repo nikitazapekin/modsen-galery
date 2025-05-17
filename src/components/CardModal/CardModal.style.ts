@@ -7,7 +7,7 @@ export const ModalOverlay = styled.div`
   height: 100%;
   backdrop-filter: blur(10px);
   background: rgba(168, 168, 168, 0.4);
-  z-index: 4; // Самый нижний
+  z-index: 4;
 `
 
 export const Modal = styled.div`
@@ -30,6 +30,7 @@ export const ModalContent = styled.div`
   display: flex;
   column-gap: 48px;
   align-items: center;
+  width: 100%;
 `
 export const ModalBtn = styled.button`
   cursor: pointer;
@@ -46,6 +47,9 @@ export const ModalPreview = styled.div`
   width: 100%;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.white};
+  position: relative;
+  z-index: 11;
+  pointer-events: auto;
 `
 
 export const ModalDescription = styled.div`
