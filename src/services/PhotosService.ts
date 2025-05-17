@@ -13,7 +13,7 @@ export default class PhotosService {
     page: number,
     limit: number,
     topic: string,
-    orderBy: "relevant" | "latest" = "latest",
+    orderBy: "relevant" | "latest" = "relevant",
   ): Promise<AxiosResponse<UnsplashPhoto[]>> {
     return $api.get<UnsplashPhoto[]>(
       `/topics/${topic}/photos?page=${page}&per_page=${limit}&order_by=${orderBy}`,

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import PhotosService from "@/services/PhotosService"
 import { UnsplashPhoto, UnsplashSearchResponse } from "@/services/types"
-
 const useFetchImages = (
   page: string | undefined,
   limit: string | undefined,
@@ -12,7 +11,9 @@ const useFetchImages = (
   const [images, setImages] = useState<UnsplashPhoto[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<Error | null>(null)
-
+  const [total, setTotal] = useState<number>(0)
+  const [totalPages, setTotalPages] = useState<number>(0)
+  console.log("QUERY", query)
   useEffect(() => {
     const fetchImages = async () => {
       if (!page || !limit) return
@@ -20,18 +21,20 @@ const useFetchImages = (
       setLoading(true)
       try {
         let fetchedImages: UnsplashPhoto[]
+        let searchResponse: UnsplashSearchResponse | null = null
 
         if (query) {
-          const searchResponse = await PhotosService.searchPhotos(
-            Number(page),
-            Number(limit),
-            query,
-            orderBy,
-          )
-          fetchedImages = searchResponse.data.results
+          searchResponse = (
+            await PhotosService.searchPhotos(Number(page), Number(limit), query, orderBy)
+          ).data
+          fetchedImages = searchResponse.results
+          setTotal(searchResponse.total)
+          setTotalPages(searchResponse.total_pages)
         } else if (type === "random") {
           const randomResponse = await PhotosService.getRandom(Number(page), Number(limit))
           fetchedImages = randomResponse.data
+          setTotal(0)
+          setTotalPages(0)
         } else if (type) {
           const topicsResponse = await PhotosService.getTopicsPhoto(
             Number(page),
@@ -40,8 +43,14 @@ const useFetchImages = (
             orderBy,
           )
           fetchedImages = topicsResponse.data
+          setTotal(0)
+          setTotalPages(0)
         } else {
-          return
+          const randomResponse = await PhotosService.getRandom(Number(page), Number(limit))
+          fetchedImages = randomResponse.data
+          setTotal(0)
+          setTotalPages(0)
+          // return
         }
 
         setImages(fetchedImages)
@@ -50,6 +59,8 @@ const useFetchImages = (
         setError(e as Error)
         console.error("Failed to fetch images:", e)
         setImages([])
+        setTotal(0)
+        setTotalPages(0)
       } finally {
         setLoading(false)
       }
@@ -58,7 +69,7 @@ const useFetchImages = (
     fetchImages()
   }, [page, limit, type, query, orderBy])
 
-  return { images, loading, error }
+  return { images, loading, error, total, total_pages: totalPages }
 }
 
 export default useFetchImages

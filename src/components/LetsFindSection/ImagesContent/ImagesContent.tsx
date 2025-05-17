@@ -9,11 +9,12 @@ import {
 } from "./ImagesContent.style"
 import Icon from "@assets/icons/Search.svg"
 import { ImagesContentProps } from "./ImagesContent.types"
+import { useNavigate } from "react-router-dom"
 
 const ImagesContent = ({ onSearch }: ImagesContentProps) => {
   const [searchQuery, setSearchQuery] = useState("")
   const timerRef = useRef<number | null>(null)
-
+  const navigate = useNavigate()
   useEffect(() => {
     return () => {
       if (timerRef.current !== null) {
@@ -28,7 +29,6 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
     }
 
     timerRef.current = window.setTimeout(() => {
-      console.log(query)
       onSearch(query)
     }, 300)
   }
@@ -37,15 +37,6 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
     const value = e.target.value
     setSearchQuery(value)
     handleSearchDebounced(value)
-  }
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      if (timerRef.current !== null) {
-        clearTimeout(timerRef.current)
-      }
-      onSearch(searchQuery)
-    }
   }
 
   return (
@@ -58,12 +49,7 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
 
       <SearchWrapper>
         <SearchIcon src={Icon} alt={"Icon"} />
-        <SearchInput
-          placeholder={"Type..."}
-          value={searchQuery}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
+        <SearchInput placeholder={"Type..."} value={searchQuery} onChange={handleChange} />
       </SearchWrapper>
     </>
   )
