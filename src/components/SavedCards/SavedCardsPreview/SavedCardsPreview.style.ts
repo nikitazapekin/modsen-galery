@@ -6,6 +6,7 @@ export const SavedCardsPreviewWrapper = styled.section`
   row-gap: 8px;
   width: 100%;
   align-items: center;
+  margin-top: 57px;
 `
 
 export const SavedCardsTitle = styled.h1`

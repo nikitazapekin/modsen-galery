@@ -7,6 +7,6 @@ export const SavedCardsGridWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: center;
-  grid-row-gap: 23.85px;
+  grid-row-gap: 26px;
   grid-column-gap: 26px;
 `

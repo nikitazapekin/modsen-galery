@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components"
 
-export const SavedCardsWrapper = styled.section`
-  padding: 65px 0 65px 0;
-`
+export const SavedCardsWrapper = styled.section``
 export const Container = styled.div`
   max-width: 908px;
   width: 100%;
