@@ -1,6 +1,5 @@
 import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom"
 import { routes } from "./routesConfig"
-import { useEffect, useState } from "react"
 
 const AppRoutes = () => {
   return (

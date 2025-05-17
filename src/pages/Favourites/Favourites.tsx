@@ -8,7 +8,7 @@ const Favourites = () => {
     <PageWrapper>
       <Header />
       <GlobalStyle />
-      <WrapperContainer></WrapperContainer>
+      <WrapperContainer>ыфсфыс</WrapperContainer>
       <Header />
     </PageWrapper>
   )

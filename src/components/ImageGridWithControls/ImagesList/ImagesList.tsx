@@ -1,6 +1,6 @@
 import { ImageListWrapper } from "./ImagesList.style"
 import { ImagesListProps } from "./ImagesList.types"
-import ImagesListItem from "./ImagesListItem/ImagesListItem"
+import ImagesListItem from "../../ImagesListItem/ImagesListItem"
 
 const ImagesList = ({ cards }: ImagesListProps) => {
   console.log("card", cards)
