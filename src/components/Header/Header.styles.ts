@@ -4,6 +4,8 @@ export const HeaderWrapper = styled.header`
   height: auto;
   background: ${({ theme }) => theme.gradients.grayGradient};
   padding: 21px 12px 22px 17px;
+  position: relative;
+  z-index: 4;
 `
 
 export const Container = styled.div`

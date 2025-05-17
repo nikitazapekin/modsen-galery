@@ -116,7 +116,7 @@ const useFetchImages = (
   const [error, setError] = useState<Error | null>(null)
   const [total, setTotal] = useState<number>(0)
   const [totalPages, setTotalPages] = useState<number>(0)
-  console.log("QUERY", query)
+
   useEffect(() => {
     const fetchImages = async () => {
       if (!page || !limit) return

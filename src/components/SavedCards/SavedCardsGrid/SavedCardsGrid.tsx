@@ -6,7 +6,7 @@ const SavedCardsGrid = ({ savedCards }: SavedCardsGridProps) => {
   return (
     <SavedCardsGridWrapper>
       {savedCards.map((item) => (
-        <ImagesListItem key={item.id} card={item} />
+        <ImagesListItem key={item.id} card={item} toggle={() => {}} />
       ))}
     </SavedCardsGridWrapper>
   )

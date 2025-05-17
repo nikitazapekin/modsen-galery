@@ -1,8 +1,9 @@
-import { useState, useCallback } from "react"
+import { UnsplashPhoto } from "@/services/types"
+import { useState, useCallback, useEffect } from "react"
 
 const useToggleModal = (initialState: boolean = false) => {
   const [isOpen, setIsOpen] = useState<boolean>(initialState)
-
+  const [selectedCard, setSelectedCard] = useState<UnsplashPhoto | null>(null)
   const handleOpen = useCallback(() => {
     setIsOpen(true)
   }, [])
@@ -11,14 +12,18 @@ const useToggleModal = (initialState: boolean = false) => {
     setIsOpen(false)
   }, [])
 
-  const toggle = useCallback((card, cardIndex) => {
+  const toggle = useCallback((card?: UnsplashPhoto) => {
+    setSelectedCard(card)
     setIsOpen((prev) => !prev)
   }, [])
+
+  useEffect(() => {}, [selectedCard])
   return {
     isOpen,
     handleOpen,
     handleClose,
     toggle,
+    selectedCard,
   }
 }
 

@@ -30,9 +30,9 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
 
     timerRef.current = window.setTimeout(() => {
       if (query) {
-        navigate(`/images/0/12/search?query=${query}`)
+        navigate(`/images/1/12/search?query=${query}`)
       } else {
-        navigate(`/images/0/12/random`)
+        navigate(`/images/1/12/random`)
       }
       onSearch(query)
     }, 300)

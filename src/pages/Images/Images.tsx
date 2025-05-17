@@ -6,6 +6,7 @@ import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
 import ImageGridWithControls from "@/components/ImageGridWithControls/ImageGridWithControls"
 import { useState } from "react"
 import Footer from "@/components/Footer/Footer"
+import CardModal from "@/components/CardModal/CardModal"
 
 const Images = () => {
   const [searchQuery, setSearchQuery] = useState("")
@@ -17,6 +18,7 @@ const Images = () => {
         <LetsFindSection onSearch={setSearchQuery} />
         <ImageGridWithControls searchQuery={searchQuery} />
       </WrapperContainer>
+
       <Footer />
     </PageWrapper>
   )

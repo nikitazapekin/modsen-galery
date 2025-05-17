@@ -25,10 +25,6 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
     setOrderBy(value)
   }
   const currentPage = parseInt(page, 10) || 0
-  /*   const handleSetPage = (newPage: number) => {
-  //  navigate(`/images/${newPage}/${limit}/${type}`)  
-  navigate(`/images/${newPage}/12/search?query=${searchQuery}`)
-  } */
 
   const handleSetPage = (newPage: number) => {
     const searchParams = new URLSearchParams(location.search)
