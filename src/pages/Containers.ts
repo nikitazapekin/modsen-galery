@@ -1,10 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
+ // @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    //font-family: ${({ theme }) => theme.fonts.lexend};
   }
 
   ul, ol {
@@ -24,11 +26,6 @@ export const PageWrapper = styled.div`
   max-width: 100%;
 `
 export const WrapperContainer = styled.main`
-  /*   max-width: ${({ theme }) => theme.container}px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;  */
-
   flex: 1 1 auto;
   display: flex;
   width: 100%;

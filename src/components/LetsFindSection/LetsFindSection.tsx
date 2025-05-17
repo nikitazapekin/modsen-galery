@@ -1,24 +1,24 @@
+// LetsFindSection.tsx
+import { useLocation } from "react-router-dom"
 import {
   Container,
   LetsFindContent,
   LetsFindSectionWrapper,
-  LetsFindTitle,
-  LetsFindTitleOrange,
-  LetsFindTitleWhite,
   PreviewImage,
 } from "./LetsFindSection.style"
 import Background from "@assets/preview/PreviewImage.png"
-const LetsFindSection = () => {
+import ImagesContent from "./ImagesContent/ImagesContent"
+import CatalogContent from "./CatalogContent/CatalogContent"
+import { LetsFindSectionProps } from "./LetsFindSection.types"
+const LetsFindSection = ({ onSearch }: LetsFindSectionProps) => {
+  const location = useLocation()
+  const isImagesPage = location.pathname.startsWith("/images")
   return (
     <LetsFindSectionWrapper>
       <PreviewImage src={Background} />
       <Container>
-        <LetsFindContent>
-          <LetsFindTitle>
-            <LetsFindTitleWhite>let's find some {` `}</LetsFindTitleWhite>
-            <LetsFindTitleOrange>Images {` `}</LetsFindTitleOrange>
-            <LetsFindTitleWhite>here!</LetsFindTitleWhite>
-          </LetsFindTitle>
+        <LetsFindContent $hasSearchInput={isImagesPage}>
+          {isImagesPage ? <ImagesContent onSearch={onSearch} /> : <CatalogContent />}
         </LetsFindContent>
       </Container>
     </LetsFindSectionWrapper>

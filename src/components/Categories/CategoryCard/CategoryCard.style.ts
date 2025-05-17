@@ -4,6 +4,7 @@ export const CategoryCardWrapper = styled.div`
   width: 285px;
   height: 244px;
   position: relative;
+  cursor: pointer;
 `
 export const CategoryCardImage = styled.img`
   width: 100%;
@@ -13,7 +14,7 @@ export const CategoryCardImage = styled.img`
 export const CategoryCardText = styled.div`
   position: absolute;
   left: 10px;
-  bottom: 10px;
+  bottom: 20px;
   font-weight: 600;
   font-size: 20px;
   color: ${({ theme }) => theme.colors.white};

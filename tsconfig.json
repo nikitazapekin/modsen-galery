@@ -2,6 +2,8 @@
  
  "compilerOptions": {
     "jsx": "react-jsx",
+     "module": "es2022",
+    "moduleResolution": "Node",
     "types": ["styled-components"],
     "baseUrl": "./src",
     "paths": {

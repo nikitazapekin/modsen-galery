@@ -28,7 +28,7 @@ const Footer = () => {
             </FooterDescriptionText>
             <FooterNetworks>
               {networks.map((item) => (
-                <Link to={"#"}>
+                <Link to={"#"} key={item.id}>
                   <FooterNetwork background={item.background} border={item.border}>
                     <FooterNetworkImage src={item.icon} />
                   </FooterNetwork>

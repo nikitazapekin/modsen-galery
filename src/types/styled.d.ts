@@ -10,6 +10,8 @@ declare module "styled-components" {
     fonts: {
       roboto: string
       lexend: string
+      montserrat: string
+      alumi: string
     }
     fontSizes: {
       small: string

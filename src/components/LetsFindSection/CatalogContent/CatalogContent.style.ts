@@ -1,0 +1,20 @@
+import styled, { css } from "styled-components"
+export const LetsFindTitle = styled.h1`
+  font-family: ${({ theme }) => theme.fonts.roboto};
+  font-weight: 700;
+  font-size: 96px;
+  text-transform: capitalize;
+  -webkit-text-stroke: ${({ theme }) => theme.borders.textBorder};
+  text-stroke: ${({ theme }) => theme.borders.textBorder};
+  paint-order: stroke fill;
+  text-align: center;
+  max-width: 764px;
+
+  color: ${({ theme }) => theme.colors.white};
+`
+export const LetsFindTitleOrange = styled.span`
+  color: ${({ theme }) => theme.colors.orangeExplicit};
+`
+export const LetsFindTitleWhite = styled.span`
+  color: ${({ theme }) => theme.colors.white};
+`
