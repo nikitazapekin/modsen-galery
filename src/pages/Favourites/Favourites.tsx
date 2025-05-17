@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components"
 import { WrapperContainer, PageWrapper, GlobalStyle } from "../Containers"
 import Header from "@/components/Header/Header"
 import SavedCards from "@/components/SavedCards/SavedCards"
+import Footer from "@/components/Footer/Footer"
 
 const Favourites = () => {
   return (
@@ -12,7 +13,7 @@ const Favourites = () => {
       <WrapperContainer>
         <SavedCards />
       </WrapperContainer>
-      <Header />
+      <Footer />
     </PageWrapper>
   )
 }

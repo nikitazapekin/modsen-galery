@@ -1,19 +1,16 @@
-import {
-  Container,
-  SavedCardsPreview,
-  SavedCardsSubtitle,
-  SavedCardsTitle,
-  SavedCardsWrapper,
-} from "./SavedCards.style"
+import useLocalStorageCards from "@/hooks/useLocalStorage"
+import { Container, SavedCardsWrapper } from "./SavedCards.style"
+import SavedCardsPreview from "./SavedCardsPreview/SavedCardsPreview"
+import SavedCardsGrid from "./SavedCardsGrid/SavedCardsGrid"
 
 const SavedCards = () => {
+  const { savedCards } = useLocalStorageCards()
+
   return (
     <SavedCardsWrapper>
       <Container>
-        <SavedCardsPreview>
-          <SavedCardsSubtitle>Saved by you</SavedCardsSubtitle>
-          <SavedCardsTitle>Your favorites list</SavedCardsTitle>
-        </SavedCardsPreview>
+        <SavedCardsPreview />
+        <SavedCardsGrid savedCards={savedCards} />
       </Container>
     </SavedCardsWrapper>
   )
