@@ -29,10 +29,14 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
     }
 
     timerRef.current = window.setTimeout(() => {
+      if (query) {
+        navigate(`/images/1/12/search?query=${query}`)
+      } else {
+        navigate(`/images/1/12/random`)
+      }
       onSearch(query)
     }, 300)
   }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setSearchQuery(value)

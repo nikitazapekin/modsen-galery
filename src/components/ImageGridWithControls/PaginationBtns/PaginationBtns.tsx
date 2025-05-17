@@ -6,12 +6,7 @@ import {
 } from "./PaginationBtns.style"
 import { PaginationBtnsProps } from "./PaginationBtns.types"
 import Arrow from "@assets/icons/Arrow.svg"
-const PaginationBtns = ({
-  total,
-  total_pages,
-  currentPage = 1,
-  handleSetPage,
-}: PaginationBtnsProps) => {
+const PaginationBtns = ({ total_pages, currentPage = 1, handleSetPage }: PaginationBtnsProps) => {
   const safeCurrentPage = Math.max(1, currentPage)
   const getVisiblePages = () => {
     const pages = new Set<number>()

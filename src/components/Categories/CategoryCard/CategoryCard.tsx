@@ -3,7 +3,7 @@ import { CategoryCardImage, CategoryCardText, CategoryCardWrapper } from "./Cate
 import { CategoryCardProps } from "./CategoryCard.types"
 const CaregoryCard = ({ card }: CategoryCardProps) => {
   return (
-    <Link to={`/images/0/12/${card.slug}`}>
+    <Link to={`/images/1/12/${card.slug}`}>
       <CategoryCardWrapper>
         <CategoryCardImage src={card.cover_photo.urls.thumb} alt={"Category"} />
         <CategoryCardText>{card.title}</CategoryCardText>

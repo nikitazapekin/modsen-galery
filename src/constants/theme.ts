@@ -15,12 +15,12 @@ export const theme = {
   gradients: {
     grayGradient: "linear-gradient(90deg, #343333 16.73%, #484848 58.63%, #282828 98.63%)",
   },
-
   fonts: {
     roboto: "'Roboto', sans-serif",
     montserrat: "'Montserrat', sans-serif",
     lexend: "Lexend Deca, sans-serif",
     alumi: "'Alumni Sans SC', sans-serif",
+    signika: "'Signika', sans-serif",
   },
   fontSizes: {
     small: "12px",

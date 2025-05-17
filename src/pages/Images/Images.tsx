@@ -1,4 +1,4 @@
-import { theme } from "@/utils/theme"
+import { theme } from "@/constants/theme"
 import { ThemeProvider } from "styled-components"
 import { WrapperContainer, PageWrapper, GlobalStyle } from "../Containers"
 import Header from "@/components/Header/Header"
@@ -6,6 +6,7 @@ import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
 import ImageGridWithControls from "@/components/ImageGridWithControls/ImageGridWithControls"
 import { useState } from "react"
 import Footer from "@/components/Footer/Footer"
+import CardModal from "@/components/CardModal/CardModal"
 
 const Images = () => {
   const [searchQuery, setSearchQuery] = useState("")
@@ -17,6 +18,7 @@ const Images = () => {
         <LetsFindSection onSearch={setSearchQuery} />
         <ImageGridWithControls searchQuery={searchQuery} />
       </WrapperContainer>
+
       <Footer />
     </PageWrapper>
   )
