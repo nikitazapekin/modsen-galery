@@ -1,4 +1,14 @@
 import styled from "styled-components"
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(168, 168, 168, 0.4);
+  z-index: 4; // Самый нижний
+`
 
 export const Modal = styled.div`
   position: fixed;
@@ -9,23 +19,14 @@ export const Modal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
-`
-
-export const ModalOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px);
-  background: rgba(168, 168, 168, 0.4);
-  z-index: 1;
+  z-index: 5;
+  pointer-events: none;
 `
 
 export const ModalContent = styled.div`
   position: relative;
-  z-index: 5;
+  z-index: 6;
+  pointer-events: auto;
   display: flex;
   column-gap: 48px;
   align-items: center;

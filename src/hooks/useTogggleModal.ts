@@ -17,7 +17,6 @@ const useToggleModal = (initialState: boolean = false) => {
     setIsOpen((prev) => !prev)
   }, [])
 
-  useEffect(() => {}, [selectedCard])
   return {
     isOpen,
     handleOpen,

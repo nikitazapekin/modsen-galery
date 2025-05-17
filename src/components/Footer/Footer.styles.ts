@@ -6,7 +6,7 @@ export const FooterWrapper = styled.footer`
   background: ${({ theme }) => theme.gradients.grayGradient};
   padding: 80px 18px 30px 18px;
   position: relative;
-  z-index: 4;
+  z-index: 5;
 `
 
 export const Container = styled.div`

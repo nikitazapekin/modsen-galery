@@ -18,7 +18,6 @@ const Images = () => {
         <LetsFindSection onSearch={setSearchQuery} />
         <ImageGridWithControls searchQuery={searchQuery} />
       </WrapperContainer>
-
       <Footer />
     </PageWrapper>
   )
