@@ -12,6 +12,7 @@ declare module "styled-components" {
       lexend: string
       montserrat: string
       alumi: string
+      signika: string
     }
     fontSizes: {
       small: string

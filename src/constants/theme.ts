@@ -20,6 +20,7 @@ export const theme = {
     montserrat: "'Montserrat', sans-serif",
     lexend: "Lexend Deca, sans-serif",
     alumi: "'Alumni Sans SC', sans-serif",
+    signika: "'Signika', sans-serif",
   },
   fontSizes: {
     small: "12px",
