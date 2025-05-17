@@ -12,9 +12,7 @@ const Category = () => {
       <Header />
       <GlobalStyle />
       <WrapperContainer>
-        {/*
         <LetsFindSection />
-        */}
         <Categories />
       </WrapperContainer>
       <Footer />

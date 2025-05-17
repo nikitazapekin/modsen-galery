@@ -7,6 +7,7 @@ const useFetchImages = (
   limit: string | undefined,
   type: string | undefined,
   query?: string,
+  orderBy: "relevant" | "latest" = "relevant",
 ) => {
   const [images, setImages] = useState<UnsplashPhoto[]>([])
   const [loading, setLoading] = useState(false)
@@ -25,6 +26,7 @@ const useFetchImages = (
             Number(page),
             Number(limit),
             query,
+            orderBy,
           )
           fetchedImages = searchResponse.data.results
         } else if (type === "random") {
@@ -35,6 +37,7 @@ const useFetchImages = (
             Number(page),
             Number(limit),
             type,
+            orderBy,
           )
           fetchedImages = topicsResponse.data
         } else {
@@ -53,7 +56,7 @@ const useFetchImages = (
     }
 
     fetchImages()
-  }, [page, limit, type, query])
+  }, [page, limit, type, query, orderBy])
 
   return { images, loading, error }
 }

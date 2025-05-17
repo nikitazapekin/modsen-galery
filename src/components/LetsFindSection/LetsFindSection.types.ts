@@ -1,3 +1,3 @@
 export interface LetsFindSectionProps {
-  onSearch: (query: string) => void
+  onSearch?: (query: string) => void
 }

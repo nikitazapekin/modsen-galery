@@ -13,17 +13,20 @@ export default class PhotosService {
     page: number,
     limit: number,
     topic: string,
+    orderBy: "relevant" | "latest" = "latest",
   ): Promise<AxiosResponse<UnsplashPhoto[]>> {
-    return $api.get<UnsplashPhoto[]>(`/topics/${topic}/photos?page=${page}&per_page=${limit}`)
+    return $api.get<UnsplashPhoto[]>(
+      `/topics/${topic}/photos?page=${page}&per_page=${limit}&order_by=${orderBy}`,
+    )
   }
-
   static async searchPhotos(
     page: number,
     limit: number,
     query: string,
+    orderBy: "relevant" | "latest" = "relevant",
   ): Promise<AxiosResponse<UnsplashSearchResponse>> {
     return $api.get<UnsplashSearchResponse>(
-      `/search/photos?page=${page}&per_page=${limit}&query=${query}`,
+      `/search/photos?page=${page}&per_page=${limit}&query=${query}&order_by=${orderBy}`,
     )
   }
 }
