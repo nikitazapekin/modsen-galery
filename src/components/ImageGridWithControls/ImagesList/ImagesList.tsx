@@ -8,7 +8,6 @@ const ImagesList = ({ cards }: ImagesListProps) => {
   return (
     <ImageListWrapper>
       {cards && cards.map((card) => <ImagesListItem card={card} key={card.id} toggle={toggle} />)}
-
       {isOpen && <CardModal card={selectedCard} toggle={toggle} cards={cards} />}
     </ImageListWrapper>
   )

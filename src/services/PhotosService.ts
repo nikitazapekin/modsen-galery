@@ -7,7 +7,7 @@ export default class PhotosService {
     return $api.get<UnsplashPhoto[]>(`/photos/random?count=${limit}&page=${page}`)
   }
   static async getPhotoTopics(): Promise<AxiosResponse<UnsplashTopic[]>> {
-    return $api.get<UnsplashTopic[]>(`/topics`)
+    return $api.get<UnsplashTopic[]>(`/topics?per_page=12`)
   }
   static async getTopicsPhoto(
     page: number,

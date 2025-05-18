@@ -8,6 +8,7 @@ import Spinner from "../Spinner/Spinner"
 import { ImageGridWithControlsProps } from "./ImageGridWithControls.types"
 import PaginationBtns from "./PaginationBtns/PaginationBtns"
 import NothingFound from "./NothingFound/NothingFound"
+import ErrorMessage from "../ErrorMessage/ErrorMessage"
 const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
   const { page, limit, type } = useParams()
   const navigate = useNavigate()
@@ -26,7 +27,6 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
   const handleSetPage = (newPage: number) => {
     const searchParams = new URLSearchParams(location.search)
     const currentQuery = searchParams.get("query") || ""
-
     if (location.pathname.includes("/search")) {
       navigate(`/images/${newPage}/${limit}/search?query=${currentQuery}`)
     } else {
@@ -38,7 +38,7 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
       <Container>
         {images.length > 0 && <SortBar handleSetOrderBy={handleSetOrderBy} />}
         {loading && <Spinner />}
-        {error && <div>Error: {error.message}</div>}
+        {error && <ErrorMessage text={"Something went wrong..."} />}
         {!loading && !error && <ImagesList cards={images} />}
         {!loading && images.length == 0 && <NothingFound />}
         {images.length > 0 && (

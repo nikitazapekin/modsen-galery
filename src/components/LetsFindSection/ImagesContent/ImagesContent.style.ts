@@ -55,7 +55,6 @@ export const SearchInput = styled.input`
   outline: none;
   border-radius: 8px;
   padding: 19px 0px 18px 54px;
-  // padding: 15px 54px 15px 16px;
   background-color: ${({ theme }) => theme.colors.white};
   font-weight: 500;
   font-size: 14px;
@@ -74,7 +73,6 @@ export const SearchPicture = styled.picture`
  right: 0;
  top: 0;
  padding: 9px 16px 9px 0;
- //padding: 13px 20px 13px 0;
        `}
 `
 export const SearchSourse = styled.source``
