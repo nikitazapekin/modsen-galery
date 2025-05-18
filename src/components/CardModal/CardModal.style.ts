@@ -48,13 +48,10 @@ export const ModalBtn = styled.div`
   z-index: 33;
   background-color: ${({ theme }) => theme.colors.orangeExplicit};
   pointer-events: auto;
+  transform: translateY(-20px);
 `
 
-export const ModalBtnImage = styled.img`
-  &:nth-child(1) {
-    transform: rotate(180deg);
-  }
-`
+export const ModalBtnImage = styled.img``
 
 export const ModalPreview = styled.div`
   display: flex;
