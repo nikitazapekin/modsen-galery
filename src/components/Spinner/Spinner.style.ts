@@ -19,7 +19,6 @@ export const SpinnerStyled = styled.span`
   box-sizing: border-box;
   animation: ${rotate} 0.8s linear infinite;
   margin: 0 auto;
-  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;

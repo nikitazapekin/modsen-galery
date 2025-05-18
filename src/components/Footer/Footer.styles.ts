@@ -52,16 +52,23 @@ export const FooterNetworks = styled.ul`
   margin-top: 5px;
 `
 
-export const FooterNetwork = styled.li<{ border: string; background: string }>`
+export const FooterNetwork = styled.li`
   width: 28px;
   height: 28px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: ${({ background }) => background};
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border: ${({ border }) => border};
+  background-color: ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.borderGray};
+  box-sizing: border-box;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.orange};
+    border: none;
+  }
 `
 
 export const FooterNetworkImage = styled.img``
