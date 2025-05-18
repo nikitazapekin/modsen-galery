@@ -22,7 +22,6 @@ import IconDisabled from "@assets/icons/NotionDisabled.svg"
 import useLocalStorageCards from "@/hooks/useLocalStorage"
 import useLockBodyScroll from "@/hooks/useLockBodyScroll"
 import { useEffect, useState } from "react"
-
 const CardModal = ({ toggle, card, cards }: CardModalProps) => {
   const { isCardSaved, toggleCard } = useLocalStorageCards()
   const [currentIndex, setCurrentIndex] = useState<number>(0)
