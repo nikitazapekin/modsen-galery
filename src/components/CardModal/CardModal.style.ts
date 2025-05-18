@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -20,6 +21,7 @@ export const Modal = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 5;
+  pointer-events: none;
 `
 
 export const ModalContent = styled.div`
@@ -31,6 +33,7 @@ export const ModalContent = styled.div`
   align-items: center;
   width: 100%;
 `
+
 export const ModalBtn = styled.div`
   cursor: pointer;
   border: none;
@@ -44,12 +47,15 @@ export const ModalBtn = styled.div`
   position: relative;
   z-index: 33;
   background-color: ${({ theme }) => theme.colors.orangeExplicit};
+  pointer-events: auto;
 `
+
 export const ModalBtnImage = styled.img`
   &:nth-child(1) {
     transform: rotate(180deg);
   }
 `
+
 export const ModalPreview = styled.div`
   display: flex;
   max-width: 700px;
@@ -60,6 +66,7 @@ export const ModalPreview = styled.div`
   z-index: 11;
   pointer-events: auto;
 `
+
 export const ModalPreviewContent = styled.div`
   width: 100%;
   max-width: 100%;
@@ -68,7 +75,9 @@ export const ModalPreviewContent = styled.div`
   align-items: center;
   height: auto;
   column-gap: 48px;
+  pointer-events: none;
 `
+
 export const ModalDescription = styled.div`
   display: flex;
   justify-content: space-between;
@@ -89,21 +98,25 @@ export const ModalIconWrapper = styled.div`
   cursor: pointer;
   width: auto;
   height: auto;
+  pointer-events: auto;
 `
+
 export const ModalIcon = styled.img`
   width: 20.83px;
   height: 29.17px;
 `
+
 export const ModalPreviewImage = styled.img`
   height: 520px;
   width: 100%;
 `
+
 export const ImgClose = styled.img`
   position: absolute;
   left: 100%;
   bottom: 100%;
   z-index: 111;
   transform: translateY(-9.64px) translateX(10px);
-
   cursor: pointer;
+  pointer-events: auto;
 `

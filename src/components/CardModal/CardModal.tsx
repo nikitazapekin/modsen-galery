@@ -20,26 +20,29 @@ import { CardModalProps } from "./CardModal.types"
 import Icon from "@assets/icons/NotionActive.svg"
 import IconDisabled from "@assets/icons/NotionDisabled.svg"
 import useLocalStorageCards from "@/hooks/useLocalStorage"
-
 import useLockBodyScroll from "@/hooks/useLockBodyScroll"
+
 const CardModal = ({ toggle, card }: CardModalProps) => {
   const { isCardSaved, toggleCard } = useLocalStorageCards()
   useLockBodyScroll(true)
+
   const handleStore = () => {
     toggleCard(card)
   }
+
   const handleNext = () => {
     console.log(1)
   }
+
   return createPortal(
     <>
-      <ModalOverlay />
+      <ModalOverlay onClick={toggle} />
       <Modal>
         <ModalPreviewContent>
           <ModalBtn onClick={handleNext}>
             <ModalBtnImage src={ArrowNext} />
           </ModalBtn>
-          <ModalPreview onClick={(e) => e.stopPropagation()}>
+          <ModalPreview>
             <ImgClose src={Close} onClick={toggle} alt={"Icon"} />
             <ModalPreviewImage src={card.urls.full} alt="Card" />
             <ModalDescription>
