@@ -1,54 +1,25 @@
 import { css } from "styled-components"
-export const smMobiles = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 320px) {
-    ${css(...args)}
-  }
-`
 
-export const mobiles = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 480px) {
-    ${css(...args)}
-  }
-`
+export const breakpoints = {
+  smMobiles: 320,
+  mobiles: 480,
+  smallTablets: 560,
+  mediumTablets: 640,
+  tablets: 768,
+  ipad: 1024,
+  macBook: 1280,
+  pc: 1440,
+} as const
 
-export const tablets = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 768px) {
-    ${css(...args)}
-  }
-`
+type Breakpoint = keyof typeof breakpoints
 
-export const smallTablets = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 560px) {
-    ${css(...args)}
-  }
-`
-
-export const mediumTablets = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 640px) {
-    ${css(...args)}
-  }
-`
-
-export const iphone = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 402px) {
-    ${css(...args)}
-  }
-`
-
-export const ipad = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 1024px) {
-    ${css(...args)}
-  }
-`
-
-export const macBook = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 1280px) {
-    ${css(...args)}
-  }
-`
-
-export const pc = (...args: [TemplateStringsArray]) => css`
-  @media (max-width: 1440px) {
-    ${css(...args)}
-  }
-`
+export const media = Object.fromEntries(
+  Object.entries(breakpoints).map(([name, size]) => [
+    name,
+    (styles: TemplateStringsArray, ...interpolations: any[]) => css`
+      @media (max-width: ${size}px) {
+        ${css(styles, ...interpolations)}
+      }
+    `,
+  ]),
+) as Record<Breakpoint, typeof css>

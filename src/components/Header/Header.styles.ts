@@ -1,4 +1,4 @@
-import { ipad, tablets } from "@/pages/Breakpoints"
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -33,17 +33,17 @@ export const HeaderList = styled.ul`
   display: flex;
   column-gap: 44px;
 
-  ${ipad`
+  ${media.ipad`
    column-gap: 20px;
    `}
-  ${tablets`
+  ${media.tablets`
  display: none
    `}
 `
 export const BurgerIconImage = styled.img`
   cursor: pointer;
   display: none;
-  ${tablets`
+  ${media.tablets`
  display: block
    `}
 `

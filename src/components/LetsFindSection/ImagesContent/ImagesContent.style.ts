@@ -1,4 +1,12 @@
 import styled, { css } from "styled-components"
+export const ImagesContentWrapper = styled.div`
+  // padding: 0 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 export const LetsFindTitleOrange = styled.span`
   color: ${({ theme }) => theme.colors.orangeExplicit};
 `

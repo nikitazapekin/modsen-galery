@@ -10,14 +10,11 @@ const Category = () => {
       <Header />
       <GlobalStyle />
       <WrapperContainer>
-        {/*
-      <LetsFindSection />
-      <Categories />
-      */}
+        <LetsFindSection />
+        <Categories />
       </WrapperContainer>
-      {/*
+
       <Footer />
-      */}
     </PageWrapper>
   )
 }

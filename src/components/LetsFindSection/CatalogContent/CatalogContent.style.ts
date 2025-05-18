@@ -1,3 +1,4 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 export const LetsFindTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.roboto};
@@ -9,8 +10,17 @@ export const LetsFindTitle = styled.h1`
   paint-order: stroke fill;
   text-align: center;
   max-width: 764px;
+  position: relative;
+  z-index: 3;
 
   color: ${({ theme }) => theme.colors.white};
+
+  ${media.tablets`
+  font-size: 64px;
+     `}
+  ${media.mobiles`
+       font-size: 48px;
+     `}
 `
 export const LetsFindTitleOrange = styled.span`
   color: ${({ theme }) => theme.colors.orangeExplicit};

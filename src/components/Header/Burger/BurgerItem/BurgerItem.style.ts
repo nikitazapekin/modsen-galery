@@ -1,4 +1,3 @@
-import { ipad, tablets } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 export const Item = styled.li<{ $isActive: boolean }>`
   font-weight: 400;

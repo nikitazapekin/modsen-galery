@@ -1,4 +1,4 @@
-import { ipad, tablets } from "@/pages/Breakpoints"
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 export const BurgerOverlay = styled.div`
   position: absolute;
@@ -21,7 +21,7 @@ export const BurgerWrapper = styled.div<{ $isOpen: boolean }>`
   z-index: 6;
   display: none;
   transform: ${({ $isOpen }) => ($isOpen ? "translateX(0%)" : "translateX(-100%)")};
-  ${tablets`
+  ${media.tablets`
  display: block;
    `}
 `

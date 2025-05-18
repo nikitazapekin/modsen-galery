@@ -1,5 +1,4 @@
 import { Cards, CategoriesWrapper, Container } from "./Categories.style"
-import { categories } from "./consts"
 import CategoryCard from "./CategoryCard/CategoryCard"
 import PhotosService from "@/services/PhotosService"
 import { useEffect, useState } from "react"
@@ -19,11 +18,9 @@ const Categories = () => {
       setIsLoading(false)
     }
   }
-
   useEffect(() => {
     getCategories()
   }, [])
-
   return (
     <CategoriesWrapper>
       <Container>

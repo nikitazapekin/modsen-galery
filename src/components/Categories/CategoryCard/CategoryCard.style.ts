@@ -1,10 +1,14 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 
 export const CategoryCardWrapper = styled.div`
-  width: 285px;
   height: 244px;
   position: relative;
   cursor: pointer;
+  ${media.tablets`
+    
+  height: 180px;
+           `}
 `
 export const CategoryCardImage = styled.img`
   width: 100%;

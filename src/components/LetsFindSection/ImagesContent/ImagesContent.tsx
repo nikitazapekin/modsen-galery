@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import {
+  ImagesContentWrapper,
   LetsFindTitleOrange,
   LetsFindTitleSmall,
   LetsFindTitleWhite,
@@ -45,16 +46,18 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
 
   return (
     <>
-      <LetsFindTitleSmall>
-        <LetsFindTitleWhite>let's find some </LetsFindTitleWhite>
-        <LetsFindTitleOrange>Images </LetsFindTitleOrange>
-        <LetsFindTitleWhite>here!</LetsFindTitleWhite>
-      </LetsFindTitleSmall>
+      <ImagesContentWrapper>
+        <LetsFindTitleSmall>
+          <LetsFindTitleWhite>let's find some </LetsFindTitleWhite>
+          <LetsFindTitleOrange>Images </LetsFindTitleOrange>
+          <LetsFindTitleWhite>here!</LetsFindTitleWhite>
+        </LetsFindTitleSmall>
 
-      <SearchWrapper>
-        <SearchIcon src={Icon} alt={"Icon"} />
-        <SearchInput placeholder={"Type..."} value={searchQuery} onChange={handleChange} />
-      </SearchWrapper>
+        <SearchWrapper>
+          <SearchIcon src={Icon} alt={"Icon"} />
+          <SearchInput placeholder={"Type..."} value={searchQuery} onChange={handleChange} />
+        </SearchWrapper>
+      </ImagesContentWrapper>
     </>
   )
 }
