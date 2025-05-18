@@ -6,6 +6,7 @@ import {
   FooterCopyRight,
   FooterDescription,
   FooterDescriptionText,
+  FooterItemsWrapper,
   FooterNetwork,
   FooterNetworkImage,
   FooterNetworks,
@@ -29,16 +30,18 @@ const Footer = () => {
             <FooterNetworks>
               {networks.map((item) => (
                 <Link to={"#"} key={item.id}>
-                  <FooterNetwork background={item.background} border={item.border}>
+                  <FooterNetwork>
                     <FooterNetworkImage src={item.icon} />
                   </FooterNetwork>
                 </Link>
               ))}
             </FooterNetworks>
           </FooterDescription>
-          {footerContent.map((item) => (
-            <FooterItem key={item.id} item={item} />
-          ))}
+          <FooterItemsWrapper>
+            {footerContent.map((item) => (
+              <FooterItem key={item.id} item={item} />
+            ))}
+          </FooterItemsWrapper>
         </FooterContent>
         <FooterCopyRight>Modsen.gallery © 2000-2025, All Rights Reserved</FooterCopyRight>
       </Container>

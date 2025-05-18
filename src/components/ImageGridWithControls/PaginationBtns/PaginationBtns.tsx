@@ -27,7 +27,7 @@ const PaginationBtns = ({ total_pages, currentPage = 1, handleSetPage }: Paginat
             onClick={() => handleSetPage(safeCurrentPage - 1)}
             aria-label="Previous page"
             src={Arrow}
-            isReversed={false}
+            $isReversed={false}
           />
         </PaginationButtonArrowWrapper>
       )}
@@ -35,7 +35,7 @@ const PaginationBtns = ({ total_pages, currentPage = 1, handleSetPage }: Paginat
         <PaginationButton
           key={page}
           onClick={() => handleSetPage(page)}
-          isActive={page === safeCurrentPage}
+          $isActive={page === safeCurrentPage}
         >
           {page}
         </PaginationButton>
@@ -45,7 +45,7 @@ const PaginationBtns = ({ total_pages, currentPage = 1, handleSetPage }: Paginat
           <PaginationButtonArrow
             onClick={() => handleSetPage(safeCurrentPage + 1)}
             aria-label="Next page"
-            isReversed={true}
+            $isReversed={true}
             src={Arrow}
           />
         </PaginationButtonArrowWrapper>

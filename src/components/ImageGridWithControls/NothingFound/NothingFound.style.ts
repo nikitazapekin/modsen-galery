@@ -1,3 +1,4 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 
 export const NothingFoundText = styled.h1`
@@ -10,6 +11,11 @@ export const NothingFoundText = styled.h1`
   font-family: ${({ theme }) => theme.fonts.lexend};
   max-width: 684px;
   margin: 0 auto;
+  position: relative;
+  ${media.mobiles`
+         font-size: 48px;
+     transform: translateY(20px);
+       `}
 `
 export const NothingFoundTextBlack = styled.span`
   color: ${({ theme }) => theme.colors.darkGray};

@@ -1,16 +1,19 @@
 import { useState, useEffect, useRef } from "react"
 import {
+  ImagesContentWrapper,
   LetsFindTitleOrange,
   LetsFindTitleSmall,
   LetsFindTitleWhite,
-  SearchIcon,
+  SearchImg,
   SearchInput,
+  SearchPicture,
+  SearchSourse,
   SearchWrapper,
 } from "./ImagesContent.style"
 import Icon from "@assets/icons/Search.svg"
+import IconBig from "@assets/icons/SearchBig.svg"
 import { ImagesContentProps } from "./ImagesContent.types"
 import { useNavigate } from "react-router-dom"
-
 const ImagesContent = ({ onSearch }: ImagesContentProps) => {
   const [searchQuery, setSearchQuery] = useState("")
   const timerRef = useRef<number | null>(null)
@@ -22,12 +25,10 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
       }
     }
   }, [])
-
   const handleSearchDebounced = (query: string) => {
     if (timerRef.current !== null) {
       clearTimeout(timerRef.current)
     }
-
     timerRef.current = window.setTimeout(() => {
       if (query) {
         navigate(`/images/1/12/search?query=${query}`)
@@ -42,19 +43,22 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
     setSearchQuery(value)
     handleSearchDebounced(value)
   }
-
   return (
     <>
-      <LetsFindTitleSmall>
-        <LetsFindTitleWhite>let's find some </LetsFindTitleWhite>
-        <LetsFindTitleOrange>Images </LetsFindTitleOrange>
-        <LetsFindTitleWhite>here!</LetsFindTitleWhite>
-      </LetsFindTitleSmall>
-
-      <SearchWrapper>
-        <SearchIcon src={Icon} alt={"Icon"} />
-        <SearchInput placeholder={"Type..."} value={searchQuery} onChange={handleChange} />
-      </SearchWrapper>
+      <ImagesContentWrapper>
+        <LetsFindTitleSmall>
+          <LetsFindTitleWhite>let's find some </LetsFindTitleWhite>
+          <LetsFindTitleOrange>Images </LetsFindTitleOrange>
+          <LetsFindTitleWhite>here!</LetsFindTitleWhite>
+        </LetsFindTitleSmall>
+        <SearchWrapper>
+          <SearchPicture>
+            <SearchSourse srcSet={IconBig} media="(max-width: 480px)" />
+            <SearchImg src={Icon} alt="Logo" />
+          </SearchPicture>
+          <SearchInput placeholder={"Type..."} value={searchQuery} onChange={handleChange} />
+        </SearchWrapper>
+      </ImagesContentWrapper>
     </>
   )
 }

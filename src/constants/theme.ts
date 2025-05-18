@@ -6,6 +6,7 @@ export const theme = {
     white: "#FFFFFF",
     orange: "#E0A449",
     gray: "rgba(255, 255, 255, 0.6)",
+    borderGray: "rgba(0, 0, 0, 0.2)",
     orangeExplicit: "#f17900",
     black: "#000",
     darkGray: "#393939",

@@ -8,12 +8,10 @@ import Spinner from "../Spinner/Spinner"
 import { ImageGridWithControlsProps } from "./ImageGridWithControls.types"
 import PaginationBtns from "./PaginationBtns/PaginationBtns"
 import NothingFound from "./NothingFound/NothingFound"
-import useToggleModal from "@/hooks/useTogggleModal"
 const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
   const { page, limit, type } = useParams()
   const navigate = useNavigate()
   const [orderBy, setOrderBy] = useState<"relevant" | "latest">("relevant")
-  const { isOpen, toggle } = useToggleModal(false)
   const { images, loading, error, total, total_pages } = useFetchImages(
     page,
     limit,
@@ -25,7 +23,6 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
     setOrderBy(value)
   }
   const currentPage = parseInt(page, 10) || 0
-
   const handleSetPage = (newPage: number) => {
     const searchParams = new URLSearchParams(location.search)
     const currentQuery = searchParams.get("query") || ""
@@ -36,7 +33,6 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
       navigate(`/images/${newPage}/${limit}/${type}`)
     }
   }
-
   return (
     <ImageGridWrapper>
       <Container>
@@ -57,5 +53,4 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
     </ImageGridWrapper>
   )
 }
-
 export default ImageGridWithControls

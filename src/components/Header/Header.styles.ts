@@ -1,3 +1,4 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -7,6 +8,11 @@ export const HeaderWrapper = styled.header`
   position: relative;
   z-index: 5;
 `
+export const LogoPicture = styled.picture`
+  cursor: pointer;
+`
+export const LogoSourse = styled.source``
+export const LogoImg = styled.img``
 
 export const Container = styled.div`
   max-width: ${({ theme }) => theme.container + 29}px;
@@ -26,4 +32,18 @@ export const HeaderNav = styled.nav`
 export const HeaderList = styled.ul`
   display: flex;
   column-gap: 44px;
+
+  ${media.ipad`
+   column-gap: 20px;
+   `}
+  ${media.tablets`
+ display: none
+   `}
+`
+export const BurgerIconImage = styled.img`
+  cursor: pointer;
+  display: none;
+  ${media.tablets`
+ display: block
+   `}
 `

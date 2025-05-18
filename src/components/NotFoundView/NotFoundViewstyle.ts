@@ -1,3 +1,4 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 
 export const NotFoundWrapper = styled.section`
@@ -5,8 +6,9 @@ export const NotFoundWrapper = styled.section`
 `
 
 export const Container = styled.div`
-  max-width: ${({ theme }) => theme.container}px;
+  max-width: ${({ theme }) => theme.container + 40}px;
   width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -21,6 +23,10 @@ export const LogoWrapper = styled.div`
   row-gap: 0px;
   align-items: center;
   margin-top: 80px;
+
+  ${media.tablets`
+margin-top: 86px;
+   `}
 `
 export const LogoTitle = styled.h1`
   font-weight: 400;
@@ -44,6 +50,9 @@ export const ContentText = styled.h3`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.lexend};
   margin-bottom: 80px;
+  ${media.tablets`
+         font-size: 32px;
+         `}
 `
 export const ContentTextBlack = styled.span`
   color: ${({ theme }) => theme.colors.darkGray};

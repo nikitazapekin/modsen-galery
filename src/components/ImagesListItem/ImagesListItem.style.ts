@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 export const ImageItem = styled.div`
   min-height: 232px;
   height: auto;
-  width: 285px;
+  //width: 285px;
   border: 1px solid #f0f1f1;
   cursor: pointer;
   transition: 0.4s ease-in-out;
@@ -12,11 +12,28 @@ export const ImageItem = styled.div`
     background: #d9d9d9;
   }
 `
+export const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 173px;
+`
 
 export const ImageItemPhoto = styled.img`
   width: 100%;
   height: 173px;
 `
+export const LoadingWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.white};
+`
+
 export const ImageItemPreview = styled.div`
   width: 100%;
   height: auto;

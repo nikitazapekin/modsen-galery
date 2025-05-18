@@ -8,16 +8,16 @@ export const PaginationWrapper = styled.div`
   margin-top: 20px;
   flex-wrap: wrap;
 `
-export const PaginationButton = styled.button<{ isActive?: boolean }>`
+export const PaginationButton = styled.button<{ $isActive?: boolean }>`
   cursor: pointer;
-  background-color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.orangeExplicit : "transparent"};
-  width: ${({ isActive }) => (isActive ? "30" : "auto")}px;
-  height: ${({ isActive }) => (isActive ? "30" : "24")}px;
+  background-color: ${({ $isActive, theme }) =>
+    $isActive ? theme.colors.orangeExplicit : "transparent"};
+  width: ${({ $isActive }) => ($isActive ? "30" : "auto")}px;
+  height: ${({ $isActive }) => ($isActive ? "30" : "24")}px;
   font-weight: 600;
   font-size: 18px;
   line-height: 128%;
-  color: ${({ isActive, theme }) => (isActive ? theme.colors.white : theme.colors.darkGray)};
+  color: ${({ $isActive, theme }) => ($isActive ? theme.colors.white : theme.colors.darkGray)};
   font-family: ${({ theme }) => theme.fonts.lexend};
   border: none;
   outline: none;
@@ -30,6 +30,6 @@ export const PaginationButtonArrowWrapper = styled.div`
   cursor: pointer;
   margin-top: 4px;
 `
-export const PaginationButtonArrow = styled.img<{ isReversed?: boolean }>`
-  transform: ${({ isReversed }) => (!isReversed ? "rotate(180deg)" : "rotate(0deg)")};
+export const PaginationButtonArrow = styled.img<{ $isReversed?: boolean }>`
+  transform: ${({ $isReversed }) => (!$isReversed ? "rotate(180deg)" : "rotate(0deg)")};
 `

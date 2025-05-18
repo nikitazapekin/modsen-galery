@@ -1,8 +1,7 @@
 {
- 
- "compilerOptions": {
+  "compilerOptions": {
     "jsx": "react-jsx",
-     "module": "es2022",
+    "module": "es2022",
     "moduleResolution": "Node",
     "types": ["styled-components"],
     "baseUrl": "./src",
@@ -18,7 +17,4 @@
   },
   "include": ["src"],
   "exclude": ["node_modules"]
-   
 }
-
-
