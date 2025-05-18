@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 export const ImageItem = styled.div`
   min-height: 232px;
   height: auto;
-  width: 285px;
+  //width: 285px;
   border: 1px solid #f0f1f1;
   cursor: pointer;
   transition: 0.4s ease-in-out;

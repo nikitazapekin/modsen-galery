@@ -1,3 +1,4 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 
 export const SortBarWrapper = styled.div`
@@ -6,6 +7,11 @@ export const SortBarWrapper = styled.div`
   column-gap: 11px;
   align-self: flex-end;
   align-items: center;
+
+  ${media.tablets`
+    
+  align-self: center
+           `}
 `
 
 export const SortBarText = styled.p`

@@ -1,3 +1,4 @@
+import { media } from "@/pages/Breakpoints"
 import styled, { css } from "styled-components"
 
 export const SavedCardsGridWrapper = styled.section`
@@ -9,4 +10,13 @@ export const SavedCardsGridWrapper = styled.section`
   justify-content: center;
   grid-row-gap: 26px;
   grid-column-gap: 26px;
+
+  ${media.ipad`
+          grid-template-columns: 285px 285px;
+          `}
+
+  ${media.tablets`
+    
+    grid-template-columns: minmax(346px, 500px)
+           `}
 `

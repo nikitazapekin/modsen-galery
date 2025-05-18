@@ -5,7 +5,7 @@ const CaregoryCard = ({ card }: CategoryCardProps) => {
   return (
     <Link to={`/images/1/12/${card.slug}`}>
       <CategoryCardWrapper>
-        <CategoryCardImage src={card.cover_photo.urls.thumb} alt={"Category"} />
+        <CategoryCardImage src={card.cover_photo.urls.full} alt={"Category"} />
         <CategoryCardText>{card.title}</CategoryCardText>
       </CategoryCardWrapper>
     </Link>

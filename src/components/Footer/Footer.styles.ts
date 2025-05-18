@@ -22,7 +22,6 @@ export const Container = styled.div`
   flex-direction: column;
   row-gap: 30px;
 `
-
 export const FooterContent = styled.div`
   width: 100%;
   display: flex;
@@ -33,7 +32,6 @@ flex-direction: column;
 align-items: center;
 width: 100%;
 row-gap: 34px;
-
 `}
 `
 export const FooterItemsWrapper = styled.div`
@@ -41,19 +39,16 @@ export const FooterItemsWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   column-gap: 85.6px;
-
   ${media.tablets`
 display: grid;
     grid-template-columns: repeat(2, auto);
     grid-row-gap: 34px
-
 `}
-
   ${media.mobiles`
 display: grid;
     grid-template-columns: repeat(1, auto);
     grid-row-gap: 34px;
-    padding: 0 61px;
+    padding: 0 47px;
 
 `}
 `
@@ -126,4 +121,9 @@ export const FooterCopyRight = styled.span`
   font-family: ${({ theme }) => theme.fonts.roboto};
   font-size: 16px;
   color: ${({ theme }) => theme.colors.gray};
+
+  ${media.mobiles`
+    margin: 0 auto
+
+`}
 `

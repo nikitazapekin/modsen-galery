@@ -12,13 +12,9 @@ const Images = () => {
       <GlobalStyle />
       <WrapperContainer>
         <LetsFindSection onSearch={setSearchQuery} />
-        {/*
         <ImageGridWithControls searchQuery={searchQuery} />
-        */}
       </WrapperContainer>
-      {/*
       <Footer />
-      */}
     </PageWrapper>
   )
 }
