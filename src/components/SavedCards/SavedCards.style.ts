@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components"
-
+import styled from "styled-components"
 export const SavedCardsWrapper = styled.section``
 export const Container = styled.div`
   max-width: 948px;

@@ -1,6 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
-
+import styled from "styled-components"
 export const ImageItem = styled.div`
   height: 232px;
   height: auto;
@@ -11,12 +10,10 @@ export const ImageItem = styled.div`
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: #d9d9d9;
   }
-
   ${media.mobiles`
 min-height: 170px;
          `}
 `
-
 export const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -25,7 +22,6 @@ export const ImageWrapper = styled.div`
 height: 135px;
          `}
 `
-
 export const ImageItemPhoto = styled.img<{ $isLoading: boolean }>`
   width: 100%;
   height: 100%;
@@ -43,7 +39,6 @@ export const LoadingWrapper = styled.div`
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.white};
 `
-
 export const ImageItemPreview = styled.div`
   width: 100%;
   height: auto;
@@ -54,7 +49,6 @@ export const ImageItemPreview = styled.div`
   column-gap: 8px;
   ${media.mobiles`
  padding: 4.06px 34px 4.06px 35.5px;
- 
          `}
 `
 export const ImageItemText = styled.h4`
@@ -63,7 +57,6 @@ export const ImageItemText = styled.h4`
   line-height: 150%;
   letter-spacing: -0.03em;
   color: ${({ theme }) => theme.colors.darkGray};
-
   font-family: ${({ theme }) => theme.fonts.lexend};
 `
 export const ImageItemIconWrapper = styled.div`
@@ -74,11 +67,9 @@ export const ImageItemIconWrapper = styled.div`
   min-width: 39px;
   height: 39px;
   background-color: ${({ theme }) => theme.colors.grayCard};
-
   ${media.mobiles`
  min-width: 29px;
  height: 29px;
- 
          `}
 `
 export const ImageItemIcon = styled.img``

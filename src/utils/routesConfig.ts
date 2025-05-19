@@ -3,8 +3,6 @@ import { FAVOURITES_PAGE, IMAGES_PAGE, MAIN_PAGE, NOTFOUND_PAGE, SEARCH_PAGE } f
 import NotFound from "@/pages/NotFound/NotFound"
 import Images from "@/pages/Images/Images"
 import Favourites from "@/pages/Favourites/Favourites"
-import { Component } from "react"
-
 export const routes = [
   {
     path: MAIN_PAGE,

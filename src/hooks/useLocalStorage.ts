@@ -1,7 +1,6 @@
 import { UnsplashPhoto } from "@/services/types"
 import { useCallback, useMemo } from "react"
 import { useSyncExternalStore } from "react"
-
 const LOCAL_STORAGE_KEY = "savedUnsplashCards"
 const notifySubscribers = () => {
   window.dispatchEvent(new Event("local-storage-changed"))
@@ -10,11 +9,9 @@ const useLocalStorageCards = () => {
   const getSnapshot = useCallback(() => {
     return localStorage.getItem(LOCAL_STORAGE_KEY) || "[]"
   }, [])
-
   const subscribe = useCallback((callback: () => void) => {
     window.addEventListener("storage", callback)
     window.addEventListener("local-storage-changed", callback)
-
     return () => {
       window.removeEventListener("storage", callback)
       window.removeEventListener("local-storage-changed", callback)
@@ -26,7 +23,6 @@ const useLocalStorageCards = () => {
   const addCard = useCallback((card: UnsplashPhoto) => {
     const currentCards = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]")
     const cardExists = currentCards.some((c: UnsplashPhoto) => c.id === card.id)
-
     if (!cardExists) {
       const updatedCards = [...currentCards, card]
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedCards))

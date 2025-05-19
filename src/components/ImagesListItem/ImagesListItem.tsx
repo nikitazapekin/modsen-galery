@@ -1,7 +1,6 @@
 import {
   ImageImg,
   ImageItem,
-  ImageItemIcon,
   ImageItemIconWrapper,
   ImageItemPhoto,
   ImageItemPreview,

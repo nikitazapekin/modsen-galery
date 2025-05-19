@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { routes } from "./routesConfig"
 
 const AppRoutes = () => {

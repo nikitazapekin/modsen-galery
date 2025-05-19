@@ -8,5 +8,4 @@ const CatalogContent = () => {
     </LetsFindTitle>
   )
 }
-
 export default CatalogContent

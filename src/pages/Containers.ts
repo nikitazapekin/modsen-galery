@@ -1,12 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components"
-
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-
   ul, ol {
 list-style: none;
 text-decoration: none;
@@ -20,7 +18,6 @@ export const PageWrapper = styled.div`
   height: auto;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.white};
-
   max-width: 100%;
 `
 export const WrapperContainer = styled.main`

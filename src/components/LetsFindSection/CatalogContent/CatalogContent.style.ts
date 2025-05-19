@@ -1,5 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 export const LetsFindTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.roboto};
   font-weight: 700;

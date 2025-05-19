@@ -62,5 +62,4 @@ const ImagesContent = ({ onSearch }: ImagesContentProps) => {
     </>
   )
 }
-
 export default ImagesContent

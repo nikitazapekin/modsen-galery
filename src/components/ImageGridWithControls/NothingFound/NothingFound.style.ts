@@ -1,6 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
-
+import styled from "styled-components"
 export const NothingFoundText = styled.h1`
   width: 100%;
   height: auto;

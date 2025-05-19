@@ -1,6 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
-
+import styled from "styled-components"
 export const LetsFindSectionWrapper = styled.section<{ $isActive?: boolean }>`
   width: 100%;
 
@@ -13,7 +12,6 @@ export const LetsFindSectionWrapper = styled.section<{ $isActive?: boolean }>`
 `
 export const Container = styled.div`
   max-width: ${({ theme }) => theme.container + 40}px;
-
   width: 100%;
   margin: 0 auto;
   display: flex;

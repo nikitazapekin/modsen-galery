@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components"
-
+import styled from "styled-components"
 export const SavedCardsPreviewWrapper = styled.section`
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@ export const SavedCardsPreviewWrapper = styled.section`
   align-items: center;
   margin-top: 57px;
 `
-
 export const SavedCardsTitle = styled.h1`
   font-weight: 400;
   font-size: 40px;

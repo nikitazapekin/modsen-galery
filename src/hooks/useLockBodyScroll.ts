@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-
 const useLockBodyScroll = (isLocked: boolean) => {
   useEffect(() => {
     if (isLocked) {
@@ -7,7 +6,6 @@ const useLockBodyScroll = (isLocked: boolean) => {
     } else {
       document.body.style.overflow = ""
     }
-
     return () => {
       document.body.style.overflow = ""
     }

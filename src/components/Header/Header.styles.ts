@@ -13,7 +13,6 @@ export const LogoPicture = styled.picture`
 `
 export const LogoSourse = styled.source``
 export const LogoImg = styled.img``
-
 export const Container = styled.div`
   max-width: ${({ theme }) => theme.container + 29}px;
   width: 100%;

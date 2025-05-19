@@ -1,5 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 export const EmptyListWrapper = styled.section`
   max-width: 684px;
   margin: 0 auto;

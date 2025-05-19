@@ -4,7 +4,6 @@ import {
   HeaderList,
   HeaderNav,
   HeaderWrapper,
-  LogoImage,
   LogoImg,
   LogoPicture,
   LogoSourse,

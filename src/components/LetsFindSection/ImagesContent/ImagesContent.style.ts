@@ -1,5 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 export const ImagesContentWrapper = styled.div`
   width: 100%;
   height: auto;
@@ -29,7 +29,6 @@ export const LetsFindTitleSmall = styled.h1`
   paint-order: stroke fill;
   max-width: 764px;
   color: ${({ theme }) => theme.colors.white};
-
   ${media.tablets`
          font-size: 48px;
        `}

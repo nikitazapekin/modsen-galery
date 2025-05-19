@@ -3,7 +3,6 @@ import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
 import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
 import Categories from "@/components/Categories/Categories"
-
 const Category = () => {
   return (
     <PageWrapper>
@@ -13,7 +12,6 @@ const Category = () => {
         <LetsFindSection />
         <Categories />
       </WrapperContainer>
-
       <Footer />
     </PageWrapper>
   )

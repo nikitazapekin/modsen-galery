@@ -1,5 +1,4 @@
 import { css } from "styled-components"
-
 export const breakpoints = {
   smMobiles: 320,
   mobiles: 480,
@@ -10,9 +9,7 @@ export const breakpoints = {
   macBook: 1280,
   pc: 1440,
 } as const
-
 type Breakpoint = keyof typeof breakpoints
-
 export const media = Object.fromEntries(
   Object.entries(breakpoints).map(([name, size]) => [
     name,

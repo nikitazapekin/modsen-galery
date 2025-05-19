@@ -3,7 +3,6 @@ import {
   Container,
   LetsFindContent,
   LetsFindSectionWrapper,
-  PreviewImage,
   PreviewImg,
   PreviewPicture,
   PreviewSourse,
@@ -30,5 +29,4 @@ const LetsFindSection = ({ onSearch }: LetsFindSectionProps) => {
     </LetsFindSectionWrapper>
   )
 }
-
 export default LetsFindSection

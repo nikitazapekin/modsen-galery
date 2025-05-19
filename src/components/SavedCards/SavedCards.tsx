@@ -3,7 +3,6 @@ import { Container, SavedCardsWrapper } from "./SavedCards.style"
 import SavedCardsPreview from "./SavedCardsPreview/SavedCardsPreview"
 import SavedCardsGrid from "./SavedCardsGrid/SavedCardsGrid"
 import EmptyList from "./EmptyList/EmptyList"
-
 const SavedCards = () => {
   const { savedCards } = useLocalStorageCards()
   return (

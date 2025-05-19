@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components"
-
 const rotate = keyframes`
   0% {
     transform: rotate(0deg);
@@ -8,7 +7,6 @@ const rotate = keyframes`
     transform: rotate(360deg);
   }
 `
-
 export const SpinnerStyled = styled.span`
   width: 48px;
   height: 48px;

@@ -12,15 +12,12 @@ import Arrow from "@assets/icons/Dropdown.svg"
 import { sortCategories } from "./consts"
 import SortCategory from "./SortCategory/SortCategory"
 import { SortBarProps } from "./SortBar.types"
-
 const SortBar = ({ handleSetOrderBy }: SortBarProps) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false)
   const [selectedOption, setSelectedOption] = useState<string>("Relevant")
-
   const handleOpenDropDown = () => {
     setIsOpenDropDown((prev) => !prev)
   }
-
   const handleSelectOption = (value: string) => {
     setSelectedOption(value)
     setIsOpenDropDown(false)
@@ -28,7 +25,6 @@ const SortBar = ({ handleSetOrderBy }: SortBarProps) => {
       handleSetOrderBy(value.toLowerCase() as "relevant" | "latest")
     }
   }
-
   return (
     <SortBarWrapper>
       <SortBarText>Sort by</SortBarText>
@@ -37,7 +33,6 @@ const SortBar = ({ handleSetOrderBy }: SortBarProps) => {
           <SortPanelText>{selectedOption}</SortPanelText>
           <SortPanelIcon $isOpenDropDown={isOpenDropDown} src={Arrow} alt={"Icon"} />
         </SortPanel>
-
         <SortPanelDropDown $isOpenDropDown={isOpenDropDown}>
           {sortCategories.map((item) => (
             <SortCategory

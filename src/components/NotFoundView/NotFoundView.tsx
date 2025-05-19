@@ -8,7 +8,6 @@ import {
   LogoWrapper,
   NotFoundWrapper,
 } from "./NotFoundViewstyle"
-
 const NotFoundView = () => {
   return (
     <NotFoundWrapper>
@@ -17,7 +16,6 @@ const NotFoundView = () => {
           <LogoTitle>404</LogoTitle>
           <LogoSubTitle>NOT FOUND</LogoSubTitle>
         </LogoWrapper>
-
         <ContentText>
           <ContentTextBlack>The page was </ContentTextBlack>
           <ContentTextOrange>not found </ContentTextOrange>

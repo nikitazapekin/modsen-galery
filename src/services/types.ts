@@ -20,7 +20,6 @@ export interface UnsplashTopic {
   }
   media_types: string[]
   status: string
-
   cover_photo: UnsplashPhoto
 }
 export interface UnsplashSearchResponse {
@@ -28,7 +27,6 @@ export interface UnsplashSearchResponse {
   total_pages: number
   results: UnsplashPhoto[]
 }
-
 export interface UnsplashPhoto {
   id: string
   slug: string
@@ -51,7 +49,6 @@ export interface UnsplashPhoto {
   blur_hash: string
   description: string | null
   alt_description: string
-
   urls: {
     raw: string
     full: string
@@ -68,7 +65,6 @@ export interface UnsplashPhoto {
   }
   likes: number
   liked_by_user: boolean
-
   topic_submissions: Record<
     string,
     {
