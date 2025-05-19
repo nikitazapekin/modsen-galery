@@ -1,4 +1,4 @@
-import { WrapperContainer, PageWrapper, GlobalStyle } from "../Containers"
+import { WrapperContainer, PageWrapper, GlobalStyle } from "@/pages/Containers"
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
 import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"

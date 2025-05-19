@@ -1,5 +1,5 @@
 import Header from "@/components/Header/Header"
-import { GlobalStyle, PageWrapper, WrapperContainer } from "../Containers"
+import { WrapperContainer, PageWrapper, GlobalStyle } from "@/pages/Containers"
 import Footer from "@/components/Footer/Footer"
 import NotFoundView from "@/components/NotFoundView/NotFoundView"
 const NotFound = () => {

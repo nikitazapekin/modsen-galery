@@ -1,4 +1,4 @@
-import $api from "../http"
+import $api from "@/http/index"
 import { AxiosResponse } from "axios"
 import { UnsplashTopic, UnsplashPhoto, UnsplashSearchResponse } from "./types"
 export default class PhotosService {

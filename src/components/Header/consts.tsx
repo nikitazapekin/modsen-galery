@@ -1,9 +1,9 @@
-import Category from "../../assets/icons/Category.svg"
-import CategoryActive from "../../assets/iconsActive/Category.svg"
-import Images from "../../assets/icons/Images.svg"
-import ImagesActive from "../../assets/iconsActive/Images.svg"
-import Favourites from "../../assets/icons/Favourites.svg"
-import FavouritesActive from "../../assets/iconsActive/Favourites.svg"
+import Category from "@assets/icons/Category.svg"
+import CategoryActive from "@assets/iconsActive/Category.svg"
+import Images from "@assets/icons/Images.svg"
+import ImagesActive from "@assets/iconsActive/Images.svg"
+import Favourites from "@assets/icons/Favourites.svg"
+import FavouritesActive from "@assets/iconsActive/Favourites.svg"
 import { HeaderBtnType } from "./Header.types"
 export const headerBtns: HeaderBtnType[] = [
   {

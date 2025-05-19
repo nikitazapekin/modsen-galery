@@ -1,5 +1,5 @@
 import { media } from "@/pages/Breakpoints"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 export const NotFoundWrapper = styled.section`
   width: 100%;
