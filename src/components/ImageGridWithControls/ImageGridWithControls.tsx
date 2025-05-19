@@ -3,7 +3,7 @@ import { Container, ImageGridWrapper } from "./ImageGridWithControls.style"
 import SortBar from "./SortBar/SortBar"
 import useFetchImages from "@/hooks/useFetchImages"
 import ImagesList from "./ImagesList/ImagesList"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Spinner from "../Spinner/Spinner"
 import { ImageGridWithControlsProps } from "./ImageGridWithControls.types"
 import PaginationBtns from "./PaginationBtns/PaginationBtns"
@@ -13,11 +13,19 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
   const { page, limit, type } = useParams()
   const navigate = useNavigate()
   const [orderBy, setOrderBy] = useState<"relevant" | "latest">("relevant")
+  const [queryFromUrl, setQueryFromUrl] = useState<string | null>(null)
+  useEffect(() => {
+    if (location.pathname.includes("/search")) {
+      const searchParams = new URLSearchParams(location.search)
+      const query = searchParams.get("query")
+      setQueryFromUrl(query)
+    }
+  }, [location.pathname, location.search])
   const { images, loading, error, total, total_pages } = useFetchImages(
     page,
     limit,
     type,
-    searchQuery,
+    queryFromUrl || searchQuery,
     orderBy,
   )
   const handleSetOrderBy = (value: "relevant" | "latest") => {

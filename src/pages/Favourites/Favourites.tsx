@@ -14,5 +14,4 @@ const Favourites = () => {
     </PageWrapper>
   )
 }
-
 export default Favourites
