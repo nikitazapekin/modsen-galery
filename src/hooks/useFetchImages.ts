@@ -17,7 +17,9 @@ const useFetchImages = (
   useEffect(() => {
     const fetchImages = async () => {
       if (!page || !limit) return
-
+      if (location.pathname.includes("/search") && query === undefined) {
+        return
+      }
       setLoading(true)
       try {
         let fetchedImages: UnsplashPhoto[]
@@ -36,22 +38,19 @@ const useFetchImages = (
           setTotal(0)
           setTotalPages(0)
         } else if (type) {
-          const topicsResponse = await PhotosService.getTopicsPhoto(
-            Number(page),
-            Number(limit),
-            type,
-            orderBy,
-          )
-          fetchedImages = topicsResponse.data
-          setTotal(0)
-          setTotalPages(0)
+          searchResponse = (
+            await PhotosService.searchPhotos(Number(page), Number(limit), type, orderBy)
+          ).data
+          fetchedImages = searchResponse.results
+          console.log("RESP", searchResponse)
+          setTotal(searchResponse.total)
+          setTotalPages(searchResponse.total_pages)
         } else {
           const randomResponse = await PhotosService.getRandom(Number(page), Number(limit))
           fetchedImages = randomResponse.data
           setTotal(0)
           setTotalPages(0)
         }
-
         setImages(fetchedImages)
         setError(null)
       } catch (e) {
