@@ -1,5 +1,7 @@
-import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
+
+import { media } from "@/styles/Breakpoints"
+
 export const SortBarWrapper = styled.div`
   max-width: 223px;
   display: flex;

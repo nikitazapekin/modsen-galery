@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+
 import {
   FooterItemCategory,
   FooterItemList,
@@ -6,6 +7,7 @@ import {
   FooterItemWrapper,
 } from "./FooterItem.style"
 import { FooterItemProps } from "./FooterItem.types"
+
 const FooterItem = ({ item }: FooterItemProps) => {
   return (
     <FooterItemWrapper $maxWidth={item.maxWidth}>

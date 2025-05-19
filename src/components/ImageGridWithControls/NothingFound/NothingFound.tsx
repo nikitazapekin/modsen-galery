@@ -3,6 +3,7 @@ import {
   NothingFoundTextBlack,
   NothingFoundTextOrange,
 } from "./NothingFound.style"
+
 const NothingFound = () => {
   return (
     <NothingFoundText>

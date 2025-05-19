@@ -1,4 +1,5 @@
 import axios from "axios"
+
 export const API_URL = import.meta.env.VITE_BASE_URL
 const accessToken = import.meta.env.VITE_ACCESS_TOKEN
 const $api = axios.create({

@@ -1,7 +1,8 @@
-import { WrapperContainer, PageWrapper, GlobalStyle } from "@/styles/Containers"
+import Footer from "@/components/Footer/Footer"
 import Header from "@/components/Header/Header"
 import SavedCards from "@/components/SavedCards/SavedCards"
-import Footer from "@/components/Footer/Footer"
+import { GlobalStyle, PageWrapper, WrapperContainer } from "@/styles/Containers"
+
 const Favourites = () => {
   return (
     <PageWrapper>

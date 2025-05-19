@@ -1,8 +1,10 @@
-import AppRoutes from "@/utils/routes"
 import { BrowserRouter } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
-import { theme } from "@/constants/theme"
+
 import ErrorBoundary from "@/components/ErrorBoundary/ErrorBoundary"
+import { theme } from "@/constants/theme"
+import AppRoutes from "@/utils/routes"
+
 function App() {
   return (
     <BrowserRouter>

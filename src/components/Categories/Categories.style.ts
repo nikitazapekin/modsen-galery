@@ -1,5 +1,6 @@
-import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
+
+import { media } from "@/styles/Breakpoints"
 
 export const CategoriesWrapper = styled.section`
   width: 100%;

@@ -1,4 +1,8 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+
+import Spinner from "@/components/Spinner/Spinner"
+
 import {
   CategoryCardImage,
   CategoryCardText,
@@ -7,8 +11,7 @@ import {
   LoadingWrapper,
 } from "./CategoryCard.style"
 import { CategoryCardProps } from "./CategoryCard.types"
-import { useState } from "react"
-import Spinner from "@/components/Spinner/Spinner"
+
 const CaregoryCard = ({ card }: CategoryCardProps) => {
   const [isLoading, setIsLoading] = useState(true)
 

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 export const SavedCardsPreviewWrapper = styled.section`
   display: flex;
   flex-direction: column;

@@ -1,8 +1,10 @@
 import useLocalStorageCards from "@/hooks/useLocalStorage"
-import { Container, SavedCardsWrapper } from "./SavedCards.style"
-import SavedCardsPreview from "./SavedCardsPreview/SavedCardsPreview"
-import SavedCardsGrid from "./SavedCardsGrid/SavedCardsGrid"
+
 import EmptyList from "./EmptyList/EmptyList"
+import { Container, SavedCardsWrapper } from "./SavedCards.style"
+import SavedCardsGrid from "./SavedCardsGrid/SavedCardsGrid"
+import SavedCardsPreview from "./SavedCardsPreview/SavedCardsPreview"
+
 const SavedCards = () => {
   const { savedCards } = useLocalStorageCards()
   return (

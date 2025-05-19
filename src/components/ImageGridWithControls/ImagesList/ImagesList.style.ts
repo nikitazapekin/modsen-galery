@@ -1,5 +1,7 @@
-import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
+
+import { media } from "@/styles/Breakpoints"
+
 export const ImageListWrapper = styled.section`
   margin-top: 25px;
   width: 100%;

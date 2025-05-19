@@ -1,7 +1,8 @@
-import Header from "@/components/Header/Header"
-import { WrapperContainer, PageWrapper, GlobalStyle } from "@/styles/Containers"
 import Footer from "@/components/Footer/Footer"
+import Header from "@/components/Header/Header"
 import NotFoundView from "@/components/NotFoundView/NotFoundView"
+import { GlobalStyle, PageWrapper, WrapperContainer } from "@/styles/Containers"
+
 const NotFound = () => {
   return (
     <PageWrapper>

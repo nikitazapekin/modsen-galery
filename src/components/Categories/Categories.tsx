@@ -1,10 +1,13 @@
+import { useEffect, useState } from "react"
+
+import PhotosService from "@/services/PhotosService"
+import { UnsplashTopic } from "@/services/types"
+
+import ErrorMessage from "../ErrorMessage/ErrorMessage"
+import Spinner from "../Spinner/Spinner"
 import { Cards, CategoriesWrapper, Container } from "./Categories.style"
 import CategoryCard from "./CategoryCard/CategoryCard"
-import PhotosService from "@/services/PhotosService"
-import { useEffect, useState } from "react"
-import { UnsplashTopic } from "@/services/types"
-import Spinner from "../Spinner/Spinner"
-import ErrorMessage from "../ErrorMessage/ErrorMessage"
+
 const Categories = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
@@ -14,7 +17,7 @@ const Categories = () => {
     try {
       const response = await PhotosService.getPhotoTopics()
       setCards(response.data)
-    } catch (e) {
+    } catch {
       setError(true)
     } finally {
       setIsLoading(false)

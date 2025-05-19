@@ -8,6 +8,7 @@ import {
   LogoWrapper,
   NotFoundWrapper,
 } from "./NotFoundViewstyle"
+
 const NotFoundView = () => {
   return (
     <NotFoundWrapper>

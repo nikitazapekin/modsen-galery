@@ -3,6 +3,7 @@ import {
   SavedCardsSubtitle,
   SavedCardsTitle,
 } from "./SavedCardsPreview.style"
+
 const SavedCardsPreview = () => {
   return (
     <SavedCardsPreviewWrapper>

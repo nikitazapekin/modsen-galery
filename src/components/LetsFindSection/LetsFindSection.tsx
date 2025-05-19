@@ -1,4 +1,9 @@
+import Background from "@assets/preview/PreviewImage.png"
+import BackgroundSmall from "@assets/preview/PreviewSmallImage.png"
 import { useLocation } from "react-router-dom"
+
+import CatalogContent from "./CatalogContent/CatalogContent"
+import ImagesContent from "./ImagesContent/ImagesContent"
 import {
   Container,
   LetsFindContent,
@@ -7,11 +12,8 @@ import {
   PreviewPicture,
   PreviewSourse,
 } from "./LetsFindSection.style"
-import Background from "@assets/preview/PreviewImage.png"
-import BackgroundSmall from "@assets/preview/PreviewSmallImage.png"
-import ImagesContent from "./ImagesContent/ImagesContent"
-import CatalogContent from "./CatalogContent/CatalogContent"
 import { LetsFindSectionProps } from "./LetsFindSection.types"
+
 const LetsFindSection = ({ onSearch }: LetsFindSectionProps) => {
   const location = useLocation()
   const isImagesPage = location.pathname.startsWith("/images")

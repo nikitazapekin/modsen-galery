@@ -1,8 +1,9 @@
-import { WrapperContainer, PageWrapper, GlobalStyle } from "@/styles/Containers"
-import Header from "@/components/Header/Header"
-import Footer from "@/components/Footer/Footer"
-import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
 import Categories from "@/components/Categories/Categories"
+import Footer from "@/components/Footer/Footer"
+import Header from "@/components/Header/Header"
+import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
+import { GlobalStyle, PageWrapper, WrapperContainer } from "@/styles/Containers"
+
 const Category = () => {
   return (
     <PageWrapper>

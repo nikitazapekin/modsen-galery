@@ -1,6 +1,9 @@
-import $api from "@/http/index"
 import { AxiosResponse } from "axios"
-import { UnsplashTopic, UnsplashPhoto, UnsplashSearchResponse } from "./types"
+
+import $api from "@/http/index"
+
+import { UnsplashPhoto, UnsplashSearchResponse, UnsplashTopic } from "./types"
+
 export default class PhotosService {
   static async getRandom(limit: number): Promise<AxiosResponse<UnsplashPhoto[]>> {
     return $api.get<UnsplashPhoto[]>(`/photos/random?count=${limit}`)

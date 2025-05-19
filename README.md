@@ -2,7 +2,7 @@
 
 
 ## Переменные среды
-- VITE_BASE_URL - корневой url API;
+- VITE_BASE_URL - корневой url unsplash API;
 - VITE_ACCESS_TOKEN - токен авторизации;
 - VITE_SECURE_TOKEN - секретный токен;
 

@@ -1,4 +1,8 @@
-import { useState, useEffect, useRef } from "react"
+import Icon from "@assets/icons/Search.svg"
+import IconBig from "@assets/icons/SearchBig.svg"
+import { useEffect, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import {
   ImagesContentWrapper,
   LetsFindTitleOrange,
@@ -10,10 +14,8 @@ import {
   SearchSourse,
   SearchWrapper,
 } from "./ImagesContent.style"
-import Icon from "@assets/icons/Search.svg"
-import IconBig from "@assets/icons/SearchBig.svg"
 import { ImagesContentProps } from "./ImagesContent.types"
-import { useNavigate } from "react-router-dom"
+
 const ImagesContent = ({ onSearch }: ImagesContentProps) => {
   const [searchQuery, setSearchQuery] = useState("")
   const timerRef = useRef<number | null>(null)

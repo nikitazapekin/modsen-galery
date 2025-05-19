@@ -1,6 +1,7 @@
 import { Component, ErrorInfo } from "react"
-import { ErrorBoundaryProps, ErrorBoundaryState } from "./ErrorBoundary.types"
+
 import ArrowNext from "@/assets/icons/Arrow.svg"
+
 import {
   ErrorButton,
   ErrorButtonIcon,
@@ -13,6 +14,8 @@ import {
   ErrorTitleBlack,
   ErrorTitleOrange,
 } from "./ErrorBoundary.style"
+import { ErrorBoundaryProps, ErrorBoundaryState } from "./ErrorBoundary.types"
+
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props)

@@ -1,9 +1,11 @@
-import { WrapperContainer, PageWrapper, GlobalStyle } from "@/styles/Containers"
-import Header from "@/components/Header/Header"
-import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
-import ImageGridWithControls from "@/components/ImageGridWithControls/ImageGridWithControls"
 import { useState } from "react"
+
 import Footer from "@/components/Footer/Footer"
+import Header from "@/components/Header/Header"
+import ImageGridWithControls from "@/components/ImageGridWithControls/ImageGridWithControls"
+import LetsFindSection from "@/components/LetsFindSection/LetsFindSection"
+import { GlobalStyle, PageWrapper, WrapperContainer } from "@/styles/Containers"
+
 const Images = () => {
   const [searchQuery, setSearchQuery] = useState("")
   return (

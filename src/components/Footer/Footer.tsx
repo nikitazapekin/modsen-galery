@@ -1,4 +1,6 @@
+import Logo from "@assets/logo/LogoFooter.svg"
 import { Link } from "react-router-dom"
+
 import { footerContent, networks } from "./consts"
 import {
   Container,
@@ -13,7 +15,6 @@ import {
   FooterWrapper,
   LogoImage,
 } from "./Footer.styles"
-import Logo from "@assets/logo/LogoFooter.svg"
 import FooterItem from "./FooterItem/FooterItem"
 
 const Footer = () => {

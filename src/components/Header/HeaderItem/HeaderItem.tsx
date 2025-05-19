@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router-dom"
+
 import { HeaderItemIcon, HeaderItemText, HeaderItemWrapper } from "./HeaderItem.styles"
 import { HeaderItemProps } from "./HeaderItem.types"
+
 const HeaderItem = ({ item }: HeaderItemProps) => {
   const location = useLocation()
   const pathSegments = location.pathname.split("/")

@@ -1,3 +1,11 @@
+import BurgerIcon from "@assets/icons/Burger.svg"
+import Logo from "@assets/logo/Logo.svg"
+import LogoHeaderSmall from "@assets/logo/LogoHeaderSmall.svg"
+
+import useBurger from "@/hooks/useBurger"
+
+import Burger from "./Burger/Burger"
+import { headerBtns } from "./consts"
 import {
   BurgerIconImage,
   Container,
@@ -8,13 +16,8 @@ import {
   LogoPicture,
   LogoSourse,
 } from "./Header.styles"
-import Logo from "@assets/logo/Logo.svg"
-import { headerBtns } from "./consts"
 import HeaderItem from "./HeaderItem/HeaderItem"
-import LogoHeaderSmall from "@assets/logo/LogoHeaderSmall.svg"
-import Burger from "./Burger/Burger"
-import BurgerIcon from "@assets/icons/Burger.svg"
-import useBurger from "@/hooks/useBurger"
+
 const Header = () => {
   const { isOpen, toggle } = useBurger(false)
   return (

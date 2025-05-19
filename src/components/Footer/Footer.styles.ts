@@ -1,5 +1,6 @@
-import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
+
+import { media } from "@/styles/Breakpoints"
 
 export const FooterWrapper = styled.footer`
   width: 100%;

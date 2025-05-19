@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+
 import PhotosService from "@/services/PhotosService"
 import { UnsplashPhoto, UnsplashSearchResponse } from "@/services/types"
 
@@ -14,8 +15,6 @@ const useFetchImages = (
   const [error, setError] = useState<Error | null>(null)
   const [total, setTotal] = useState<number>(0)
   const [totalPages, setTotalPages] = useState<number>(0)
-  const [isQueryReady, setIsQueryReady] = useState(false)
-
   const getImages = async (
     page: string | undefined,
     limit: string | undefined,
@@ -25,11 +24,9 @@ const useFetchImages = (
   ) => {
     try {
       setLoading(true)
-
       if ((type === "search" || location.pathname.includes("/search")) && query === undefined) {
         return
       }
-
       let fetchedImages: UnsplashPhoto[] = []
       let response: UnsplashSearchResponse | null = null
 
@@ -56,7 +53,6 @@ const useFetchImages = (
       setError(null)
     } catch (e) {
       setError(e as Error)
-      console.error("Failed to fetch images:", e)
       setImages([])
       setTotal(0)
       setTotalPages(0)

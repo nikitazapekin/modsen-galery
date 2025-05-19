@@ -1,4 +1,7 @@
+import BurgerIcon from "@assets/icons/Burger.svg"
+import BurgerLogo from "@assets/logo/BurgerLogo.svg"
 import { Link } from "react-router-dom"
+
 import { headerBtns } from "../consts"
 import {
   BurgerButton,
@@ -11,11 +14,9 @@ import {
   BurgerPreviewImage,
   BurgerWrapper,
 } from "./Burger.style"
-import BurgerLogo from "@assets/logo/BurgerLogo.svg"
-import BurgerIcon from "@assets/icons/Burger.svg"
+import { BurgerProps } from "./Burger.types"
 import BurgerItem from "./BurgerItem/BurgerItem"
 import { networks } from "./consts"
-import { BurgerProps } from "./Burger.types"
 
 const Burger = ({ toggle, isOpen }: BurgerProps) => {
   return (

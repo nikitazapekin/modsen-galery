@@ -1,4 +1,5 @@
 import { LetsFindTitle, LetsFindTitleOrange, LetsFindTitleWhite } from "./CatalogContent.style"
+
 const CatalogContent = () => {
   return (
     <LetsFindTitle>

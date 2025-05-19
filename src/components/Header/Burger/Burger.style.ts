@@ -1,5 +1,7 @@
-import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
+
+import { media } from "@/styles/Breakpoints"
+
 export const BurgerOverlay = styled.div`
   position: absolute;
   z-index: 6;

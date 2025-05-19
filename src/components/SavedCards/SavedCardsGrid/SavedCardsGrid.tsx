@@ -1,4 +1,5 @@
 import ImagesListItem from "@/components/ImagesListItem/ImagesListItem"
+
 import { SavedCardsGridWrapper } from "./SavedCardsGrid.style"
 import { SavedCardsGridProps } from "./SavedCardsGrid.types"
 

@@ -1,8 +1,10 @@
-import { ImageListWrapper } from "./ImagesList.style"
-import { ImagesListProps } from "./ImagesList.types"
-import ImagesListItem from "../../ImagesListItem/ImagesListItem"
 import CardModal from "@/components/CardModal/CardModal"
 import useToggleModal from "@/hooks/useTogggleModal"
+
+import ImagesListItem from "../../ImagesListItem/ImagesListItem"
+import { ImageListWrapper } from "./ImagesList.style"
+import { ImagesListProps } from "./ImagesList.types"
+
 const ImagesList = ({ cards }: ImagesListProps) => {
   const { isOpen, toggle, selectedCard } = useToggleModal()
   return (

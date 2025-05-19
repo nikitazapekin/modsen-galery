@@ -1,14 +1,16 @@
-import { useParams, useNavigate, useLocation } from "react-router-dom"
-import { Container, ImageGridWrapper } from "./ImageGridWithControls.style"
-import SortBar from "./SortBar/SortBar"
-import useFetchImages from "@/hooks/useFetchImages"
-import ImagesList from "./ImagesList/ImagesList"
 import { useEffect, useState } from "react"
-import Spinner from "../Spinner/Spinner"
-import { ImageGridWithControlsProps } from "./ImageGridWithControls.types"
-import PaginationBtns from "./PaginationBtns/PaginationBtns"
-import NothingFound from "./NothingFound/NothingFound"
+import { useLocation, useNavigate, useParams } from "react-router-dom"
+
+import useFetchImages from "@/hooks/useFetchImages"
+
 import ErrorMessage from "../ErrorMessage/ErrorMessage"
+import Spinner from "../Spinner/Spinner"
+import { Container, ImageGridWrapper } from "./ImageGridWithControls.style"
+import { ImageGridWithControlsProps } from "./ImageGridWithControls.types"
+import ImagesList from "./ImagesList/ImagesList"
+import NothingFound from "./NothingFound/NothingFound"
+import PaginationBtns from "./PaginationBtns/PaginationBtns"
+import SortBar from "./SortBar/SortBar"
 
 const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
   const { page, limit, type } = useParams()

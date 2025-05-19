@@ -1,4 +1,7 @@
+import Arrow from "@assets/icons/Dropdown.svg"
 import { useState } from "react"
+
+import { sortCategories } from "./consts"
 import {
   SortBarText,
   SortBarWrapper,
@@ -8,10 +11,9 @@ import {
   SortPanelText,
   SortPanelWrapper,
 } from "./SortBar.styles"
-import Arrow from "@assets/icons/Dropdown.svg"
-import { sortCategories } from "./consts"
-import SortCategory from "./SortCategory/SortCategory"
 import { SortBarProps } from "./SortBar.types"
+import SortCategory from "./SortCategory/SortCategory"
+
 const SortBar = ({ handleSetOrderBy }: SortBarProps) => {
   const [isOpenDropDown, setIsOpenDropDown] = useState<boolean>(false)
   const [selectedOption, setSelectedOption] = useState<string>("Relevant")

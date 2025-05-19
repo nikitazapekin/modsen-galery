@@ -1,5 +1,7 @@
+import { useCallback, useState } from "react"
+
 import { UnsplashPhoto } from "@/services/types"
-import { useState, useCallback } from "react"
+
 const useToggleModal = (initialState: boolean = false) => {
   const [isOpen, setIsOpen] = useState<boolean>(initialState)
   const [selectedCard, setSelectedCard] = useState<UnsplashPhoto | null>(null)

@@ -1,3 +1,12 @@
+import Notion from "@assets/icons/NotionActive.svg"
+import NotionDisabled from "@assets/icons/NotionDisabled.svg"
+import SmallNotion from "@assets/icons/SmallNotionActive.svg"
+import SmallNotionDisabled from "@assets/icons/SmallNotionDisabled.svg"
+import { useState } from "react"
+
+import useLocalStorageCards from "@/hooks/useLocalStorage"
+
+import Spinner from "../Spinner/Spinner"
 import {
   ImageImg,
   ImageItem,
@@ -11,19 +20,14 @@ import {
   LoadingWrapper,
 } from "./ImagesListItem.style"
 import { ImagesListItemProps } from "./ImagesListItem.types"
-import Notion from "@assets/icons/NotionActive.svg"
-import NotionDisabled from "@assets/icons/NotionDisabled.svg"
-import SmallNotion from "@assets/icons/SmallNotionActive.svg"
-import SmallNotionDisabled from "@assets/icons/SmallNotionDisabled.svg"
-import useLocalStorageCards from "@/hooks/useLocalStorage"
-import { useState } from "react"
-import Spinner from "../Spinner/Spinner"
+
 const ImagesListItem = ({ card, toggle }: ImagesListItemProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const truncateText = (text: string, maxLength: number) => {
     if (!text) return "Title is missed"
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text
   }
+
   const { isCardSaved, toggleCard } = useLocalStorageCards()
   const handleStore = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()

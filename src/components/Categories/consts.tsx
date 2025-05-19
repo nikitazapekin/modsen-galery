@@ -1,15 +1,16 @@
-import Art from "@assets/categories/Art.png"
-import Cars from "@assets/categories/Cars.png"
 import Architecture from "@assets/categories/Architecture.png"
-import Food from "@assets/categories/Food.png"
-import Religion from "@assets/categories/Religion.png"
-import Clothes from "@assets/categories/Clothes.png"
-import Technologies from "@assets/categories/Technologies.png"
-import Music from "@assets/categories/Music.png"
+import Art from "@assets/categories/Art.png"
 import Bussiness from "@assets/categories/Business.png"
-import Sport from "@assets/categories/Sport.png"
-import Social from "@assets/categories/Social.png"
+import Cars from "@assets/categories/Cars.png"
+import Clothes from "@assets/categories/Clothes.png"
+import Food from "@assets/categories/Food.png"
+import Music from "@assets/categories/Music.png"
+import Religion from "@assets/categories/Religion.png"
 import Sky from "@assets/categories/Sky.png"
+import Social from "@assets/categories/Social.png"
+import Sport from "@assets/categories/Sport.png"
+import Technologies from "@assets/categories/Technologies.png"
+
 export const categories = [
   { id: 1, image: Art, text: "Art" },
   { id: 2, image: Cars, text: "Cars" },
