@@ -45,7 +45,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           </ErrorTitle>
           <ErrorDescription>
             <ErrorDescriptionBlack>Error details: </ErrorDescriptionBlack>
-            <ErrorDescriptionOrange>{this.state.error.message}</ErrorDescriptionOrange>
+            <ErrorDescriptionOrange>{this.state.error.message}.</ErrorDescriptionOrange>
           </ErrorDescription>
           <ErrorButton onClick={this.handleReset}>
             <ErrorButtonText>Try again</ErrorButtonText>
