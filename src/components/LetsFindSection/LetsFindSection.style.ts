@@ -41,14 +41,14 @@ export const PreviewImg = styled.img`
   height: 100%;
 `
 
-export const LetsFindContent = styled.div<{ hasSearchInput: boolean }>`
-  padding: ${({ hasSearchInput }) =>
-    hasSearchInput ? "65px 20px 65px 20px" : "98px 20px 97px 20px"};
+export const LetsFindContent = styled.div<{ $hasSearchInput: boolean }>`
+  padding: ${({ $hasSearchInput }) =>
+    $hasSearchInput ? "65px 20px 65px 20px" : "98px 20px 97px 20px"};
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${({ hasSearchInput }) => media.mobiles`
+  ${({ $hasSearchInput }) => media.mobiles`
  
-    padding: ${hasSearchInput ? "30px 20px 20px 20px" : "45px 20px 45px 20px"};
+    padding: ${$hasSearchInput ? "30px 20px 20px 20px" : "45px 20px 45px 20px"};
   `}
 `

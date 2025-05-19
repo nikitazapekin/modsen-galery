@@ -23,7 +23,7 @@ const Footer = () => {
       <Container>
         <FooterContent>
           <FooterDescription>
-            <LogoImage src={Logo} icon="Logo" />
+            <LogoImage src={Logo} alt="Logo" />
             <FooterDescriptionText>
               We have images that capture every mood and inspire every vision. From breathtaking
               landscapes to vibrant portraits.

@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 import { media } from "@/styles/Breakpoints"
 
-export const FooterItemWrapper = styled.div<{ maxWidth: number }>`
+export const FooterItemWrapper = styled.div<{ $maxWidth: number }>`
   display: flex;
   flex-direction: column;
-  max-width: ${({ maxWidth }) => maxWidth}px;
+  max-width: ${({ $maxWidth }) => $maxWidth}px;
   ${media.ipad`
     order: 1; 
   `}
