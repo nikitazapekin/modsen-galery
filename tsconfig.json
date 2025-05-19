@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
+   "module": "ESNext",
+    "moduleResolution": "Bundler",
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
-    "module": "es2022",
-    "moduleResolution": "Node",
-    "types": ["styled-components"],
+    "types": ["styled-components", "vite/client"],
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"],
@@ -17,9 +18,9 @@
       "@pages/*": ["./pages/*"],
       "@utils/*": ["./utils/*"],
       "@types/*": ["./types/*"],
-       "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"]
     }
   },
-  "include": ["src",  "vite.config.ts"],
+  "include": ["src", "vite.config.ts"],
   "exclude": ["node_modules"]
 }
