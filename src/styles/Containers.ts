@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   ul, ol {
 list-style: none;
 text-decoration: none;

@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, useLocation } from "react-router-dom"
 import { Container, ImageGridWrapper } from "./ImageGridWithControls.style"
 import SortBar from "./SortBar/SortBar"
 import useFetchImages from "@/hooks/useFetchImages"
@@ -9,24 +9,25 @@ import { ImageGridWithControlsProps } from "./ImageGridWithControls.types"
 import PaginationBtns from "./PaginationBtns/PaginationBtns"
 import NothingFound from "./NothingFound/NothingFound"
 import ErrorMessage from "../ErrorMessage/ErrorMessage"
+
 const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
   const { page, limit, type } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
   const [orderBy, setOrderBy] = useState<"relevant" | "latest">("relevant")
-  const getInitialQuery = () => {
-    if (location.pathname.includes("/search")) {
-      const searchParams = new URLSearchParams(location.search)
-      return searchParams.get("query")
-    }
-    return null
-  }
+  const [query, setQuery] = useState<string | undefined>(undefined)
 
-  const [queryFromUrl, setQueryFromUrl] = useState<string | null>(() => {
+  useEffect(() => {
     if (searchQuery) {
-      return searchQuery
+      setQuery(searchQuery)
+    } else if (location.pathname.includes("/search")) {
+      const searchParams = new URLSearchParams(location.search)
+      const urlQuery = searchParams.get("query")
+      setQuery(urlQuery || undefined)
+    } else {
+      setQuery(undefined)
     }
-    return getInitialQuery()
-  })
+  }, [location.search, location.pathname, searchQuery])
 
   const {
     images = [],
@@ -34,33 +35,34 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
     error,
     total,
     total_pages,
-  } = useFetchImages(page, limit, type, queryFromUrl || searchQuery, orderBy)
+  } = useFetchImages(page, limit, type, query, orderBy)
 
-  useEffect(() => {
-    setQueryFromUrl(searchQuery)
-  }, [searchQuery])
   const handleSetOrderBy = (value: "relevant" | "latest") => {
     setOrderBy(value)
   }
-  const currentPage = parseInt(page, 10) || 0
+
+  const currentPage = parseInt(page || "1", 10)
+  const currentLimit = parseInt(limit || "10", 10)
+
   const handleSetPage = (newPage: number) => {
-    const searchParams = new URLSearchParams(location.search)
-    const currentQuery = searchParams.get("query") || ""
     if (location.pathname.includes("/search")) {
-      navigate(`/images/${newPage}/${limit}/search?query=${currentQuery}`)
+      navigate(`/images/${newPage}/${currentLimit}/search?query=${query}`)
+    } else if (type) {
+      navigate(`/images/${newPage}/${currentLimit}/${type}`)
     } else {
-      navigate(`/images/${newPage}/${limit}/${type}`)
+      navigate(`/images/${newPage}/${currentLimit}`)
     }
   }
+
   return (
     <ImageGridWrapper>
       <Container>
         {images.length > 0 && <SortBar handleSetOrderBy={handleSetOrderBy} />}
         {loading && <Spinner />}
-        {error && <ErrorMessage text={"Something went wrong..."} />}
+        {error && <ErrorMessage text="Something went wrong..." />}
         {!loading && !error && <ImagesList cards={images} />}
-        {!loading && images.length == 0 && <NothingFound />}
-        {images && images.length > 0 && (
+        {!loading && images.length === 0 && <NothingFound />}
+        {images.length > 0 && (
           <PaginationBtns
             total={total}
             total_pages={total_pages}
@@ -72,4 +74,5 @@ const ImageGridWithControls = ({ searchQuery }: ImageGridWithControlsProps) => {
     </ImageGridWrapper>
   )
 }
+
 export default ImageGridWithControls

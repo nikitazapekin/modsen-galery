@@ -22,7 +22,7 @@ const useLocalStorageCards = () => {
 
   const addCard = useCallback((card: UnsplashPhoto) => {
     const currentCards = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]")
-    const cardExists = currentCards.some((c: UnsplashPhoto) => c.id === card.id)
+    const cardExists = currentCards.some((card: UnsplashPhoto) => card.id === card.id)
     if (!cardExists) {
       const updatedCards = [...currentCards, card]
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedCards))
@@ -31,13 +31,12 @@ const useLocalStorageCards = () => {
   }, [])
   const removeCard = useCallback((cardId: string) => {
     const currentCards = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || "[]")
-    const updatedCards = currentCards.filter((c: UnsplashPhoto) => c.id !== cardId)
-
+    const updatedCards = currentCards.filter((card: UnsplashPhoto) => card.id !== cardId)
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedCards))
     notifySubscribers()
   }, [])
   const isCardSaved = useCallback(
-    (cardId: string) => savedCards.some((c) => c.id === cardId),
+    (cardId: string) => savedCards.some((card) => card.id === cardId),
     [savedCards],
   )
   const toggleCard = useCallback(

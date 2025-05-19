@@ -16,7 +16,7 @@ const CaregoryCard = ({ card }: CategoryCardProps) => {
     setIsLoading(false)
   }
   return (
-    <Link to={`/images/1/12/${card.slug}`}>
+    <Link to={`/images/1/12/search?query=${card.slug}`}>
       <CategoryCardWrapper>
         <ImageWrapper>
           {isLoading && (
@@ -30,7 +30,6 @@ const CaregoryCard = ({ card }: CategoryCardProps) => {
             onLoad={handleImageLoad}
           />
         </ImageWrapper>
-
         <CategoryCardText>{card.title}</CategoryCardText>
       </CategoryCardWrapper>
     </Link>

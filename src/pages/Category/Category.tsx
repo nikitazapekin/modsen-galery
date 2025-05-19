@@ -16,5 +16,4 @@ const Category = () => {
     </PageWrapper>
   )
 }
-
 export default Category
