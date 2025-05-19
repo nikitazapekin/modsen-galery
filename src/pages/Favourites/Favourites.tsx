@@ -1,4 +1,4 @@
-import { WrapperContainer, PageWrapper, GlobalStyle } from "@/pages/Containers"
+import { WrapperContainer, PageWrapper, GlobalStyle } from "@/styles/Containers"
 import Header from "@/components/Header/Header"
 import SavedCards from "@/components/SavedCards/SavedCards"
 import Footer from "@/components/Footer/Footer"

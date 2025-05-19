@@ -1,4 +1,4 @@
-import { media } from "@/pages/Breakpoints"
+import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
 export const SortBarWrapper = styled.div`
   max-width: 223px;

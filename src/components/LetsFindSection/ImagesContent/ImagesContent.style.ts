@@ -1,4 +1,4 @@
-import { media } from "@/pages/Breakpoints"
+import { media } from "@/styles/Breakpoints"
 import styled from "styled-components"
 export const ImagesContentWrapper = styled.div`
   width: 100%;

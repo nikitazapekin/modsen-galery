@@ -15,7 +15,8 @@
       "@http/*": ["./http/*"],
       "@pages/*": ["./pages/*"],
       "@utils/*": ["./utils/*"],
-      "@types/*": ["./tyoes/*"]
+      "@types/*": ["./types/*"],
+       "@styles/*": ["./styles/*"]
     }
   },
   "include": ["src"],
